@@ -1,0 +1,168 @@
+{"cond": "ideal (no degradation)", "kind": "header", "ok": true, "got": "C0029", "truth": "C0029"}
+{"cond": "ideal (no degradation)", "kind": "qr", "ok": true, "got": "C0029", "truth": "C0029"}
+{"cond": "ideal (no degradation)", "kind": "header", "ok": true, "got": "C0002", "truth": "C0002"}
+{"cond": "ideal (no degradation)", "kind": "qr", "ok": true, "got": "C0002", "truth": "C0002"}
+{"cond": "ideal (no degradation)", "kind": "header", "ok": true, "got": "C0029", "truth": "C0029"}
+{"cond": "ideal (no degradation)", "kind": "qr", "ok": true, "got": "C0029", "truth": "C0029"}
+{"cond": "ideal (no degradation)", "kind": "header", "ok": true, "got": "C0005", "truth": "C0005"}
+{"cond": "ideal (no degradation)", "kind": "qr", "ok": true, "got": "C0005", "truth": "C0005"}
+{"cond": "ideal (no degradation)", "kind": "header", "ok": true, "got": "C0018", "truth": "C0018"}
+{"cond": "ideal (no degradation)", "kind": "qr", "ok": true, "got": "C0018", "truth": "C0018"}
+{"cond": "ideal (no degradation)", "kind": "header", "ok": true, "got": "C0006", "truth": "C0006"}
+{"cond": "ideal (no degradation)", "kind": "qr", "ok": true, "got": "C0006", "truth": "C0006"}
+{"cond": "ideal (no degradation)", "kind": "header", "ok": true, "got": "C0019", "truth": "C0019"}
+{"cond": "ideal (no degradation)", "kind": "qr", "ok": true, "got": "C0019", "truth": "C0019"}
+{"cond": "ideal (no degradation)", "kind": "header", "ok": true, "got": "C0010", "truth": "C0010"}
+{"cond": "ideal (no degradation)", "kind": "qr", "ok": true, "got": "C0010", "truth": "C0010"}
+{"cond": "ideal (no degradation)", "kind": "header", "ok": true, "got": "C0021", "truth": "C0021"}
+{"cond": "ideal (no degradation)", "kind": "qr", "ok": true, "got": "C0021", "truth": "C0021"}
+{"cond": "ideal (no degradation)", "kind": "header", "ok": true, "got": "C0011", "truth": "C0011"}
+{"cond": "ideal (no degradation)", "kind": "qr", "ok": true, "got": "C0011", "truth": "C0011"}
+{"cond": "ideal (no degradation)", "kind": "header", "ok": true, "got": "C0025", "truth": "C0025"}
+{"cond": "ideal (no degradation)", "kind": "qr", "ok": true, "got": "C0025", "truth": "C0025"}
+{"cond": "ideal (no degradation)", "kind": "header", "ok": true, "got": "C0026", "truth": "C0026"}
+{"cond": "ideal (no degradation)", "kind": "qr", "ok": true, "got": "C0026", "truth": "C0026"}
+{"cond": "nominal phone photo", "kind": "header", "ok": true, "got": "C0004", "truth": "C0004"}
+{"cond": "nominal phone photo", "kind": "qr", "ok": false, "got": null, "truth": "C0004"}
+{"cond": "nominal phone photo", "kind": "header", "ok": true, "got": "C0018", "truth": "C0018"}
+{"cond": "nominal phone photo", "kind": "qr", "ok": false, "got": null, "truth": "C0018"}
+{"cond": "nominal phone photo", "kind": "header", "ok": true, "got": "C0020", "truth": "C0020"}
+{"cond": "nominal phone photo", "kind": "qr", "ok": true, "got": "C0020", "truth": "C0020"}
+{"cond": "nominal phone photo", "kind": "header", "ok": true, "got": "C0020", "truth": "C0020"}
+{"cond": "nominal phone photo", "kind": "qr", "ok": true, "got": "C0020", "truth": "C0020"}
+{"cond": "nominal phone photo", "kind": "header", "ok": true, "got": "C0018", "truth": "C0018"}
+{"cond": "nominal phone photo", "kind": "qr", "ok": false, "got": null, "truth": "C0018"}
+{"cond": "nominal phone photo", "kind": "header", "ok": true, "got": "C0008", "truth": "C0008"}
+{"cond": "nominal phone photo", "kind": "qr", "ok": true, "got": "C0008", "truth": "C0008"}
+{"cond": "nominal phone photo", "kind": "header", "ok": true, "got": "C0020", "truth": "C0020"}
+{"cond": "nominal phone photo", "kind": "qr", "ok": false, "got": null, "truth": "C0020"}
+{"cond": "nominal phone photo", "kind": "header", "ok": true, "got": "C0028", "truth": "C0028"}
+{"cond": "nominal phone photo", "kind": "qr", "ok": true, "got": "C0028", "truth": "C0028"}
+{"cond": "nominal phone photo", "kind": "header", "ok": true, "got": "C0021", "truth": "C0021"}
+{"cond": "nominal phone photo", "kind": "qr", "ok": false, "got": null, "truth": "C0021"}
+{"cond": "nominal phone photo", "kind": "header", "ok": true, "got": "C0025", "truth": "C0025"}
+{"cond": "nominal phone photo", "kind": "qr", "ok": true, "got": "C0025", "truth": "C0025"}
+{"cond": "nominal phone photo", "kind": "header", "ok": true, "got": "C0006", "truth": "C0006"}
+{"cond": "nominal phone photo", "kind": "qr", "ok": false, "got": null, "truth": "C0006"}
+{"cond": "nominal phone photo", "kind": "header", "ok": true, "got": "C0011", "truth": "C0011"}
+{"cond": "nominal phone photo", "kind": "qr", "ok": true, "got": "C0011", "truth": "C0011"}
+{"cond": "blur 2.5", "kind": "header", "ok": false, "got": null, "truth": "C0005"}
+{"cond": "blur 2.5", "kind": "qr", "ok": false, "got": null, "truth": "C0005"}
+{"cond": "blur 2.5", "kind": "header", "ok": true, "got": "C0022", "truth": "C0022"}
+{"cond": "blur 2.5", "kind": "qr", "ok": false, "got": null, "truth": "C0022"}
+{"cond": "blur 2.5", "kind": "header", "ok": false, "got": null, "truth": "C0012"}
+{"cond": "blur 2.5", "kind": "qr", "ok": false, "got": null, "truth": "C0012"}
+{"cond": "blur 2.5", "kind": "header", "ok": false, "got": null, "truth": "C0017"}
+{"cond": "blur 2.5", "kind": "qr", "ok": false, "got": null, "truth": "C0017"}
+{"cond": "blur 2.5", "kind": "header", "ok": false, "got": null, "truth": "C0006"}
+{"cond": "blur 2.5", "kind": "qr", "ok": false, "got": null, "truth": "C0006"}
+{"cond": "blur 2.5", "kind": "header", "ok": false, "got": null, "truth": "C0019"}
+{"cond": "blur 2.5", "kind": "qr", "ok": false, "got": null, "truth": "C0019"}
+{"cond": "blur 2.5", "kind": "header", "ok": false, "got": null, "truth": "C0001"}
+{"cond": "blur 2.5", "kind": "qr", "ok": false, "got": null, "truth": "C0001"}
+{"cond": "blur 2.5", "kind": "header", "ok": false, "got": null, "truth": "C0022"}
+{"cond": "blur 2.5", "kind": "qr", "ok": false, "got": null, "truth": "C0022"}
+{"cond": "blur 2.5", "kind": "header", "ok": false, "got": null, "truth": "C0019"}
+{"cond": "blur 2.5", "kind": "qr", "ok": false, "got": null, "truth": "C0019"}
+{"cond": "blur 2.5", "kind": "header", "ok": false, "got": null, "truth": "C0026"}
+{"cond": "blur 2.5", "kind": "qr", "ok": false, "got": null, "truth": "C0026"}
+{"cond": "blur 2.5", "kind": "header", "ok": false, "got": null, "truth": "C0000"}
+{"cond": "blur 2.5", "kind": "qr", "ok": false, "got": null, "truth": "C0000"}
+{"cond": "blur 2.5", "kind": "header", "ok": false, "got": null, "truth": "C0020"}
+{"cond": "blur 2.5", "kind": "qr", "ok": false, "got": null, "truth": "C0020"}
+{"cond": "jpeg q20", "kind": "header", "ok": true, "got": "C0004", "truth": "C0004"}
+{"cond": "jpeg q20", "kind": "qr", "ok": false, "got": null, "truth": "C0004"}
+{"cond": "jpeg q20", "kind": "header", "ok": true, "got": "C0011", "truth": "C0011"}
+{"cond": "jpeg q20", "kind": "qr", "ok": true, "got": "C0011", "truth": "C0011"}
+{"cond": "jpeg q20", "kind": "header", "ok": true, "got": "C0027", "truth": "C0027"}
+{"cond": "jpeg q20", "kind": "qr", "ok": false, "got": null, "truth": "C0027"}
+{"cond": "jpeg q20", "kind": "header", "ok": true, "got": "C0009", "truth": "C0009"}
+{"cond": "jpeg q20", "kind": "qr", "ok": true, "got": "C0009", "truth": "C0009"}
+{"cond": "jpeg q20", "kind": "header", "ok": true, "got": "C0028", "truth": "C0028"}
+{"cond": "jpeg q20", "kind": "qr", "ok": false, "got": null, "truth": "C0028"}
+{"cond": "jpeg q20", "kind": "header", "ok": true, "got": "C0009", "truth": "C0009"}
+{"cond": "jpeg q20", "kind": "qr", "ok": false, "got": null, "truth": "C0009"}
+{"cond": "jpeg q20", "kind": "header", "ok": true, "got": "C0021", "truth": "C0021"}
+{"cond": "jpeg q20", "kind": "qr", "ok": false, "got": null, "truth": "C0021"}
+{"cond": "jpeg q20", "kind": "header", "ok": true, "got": "C0012", "truth": "C0012"}
+{"cond": "jpeg q20", "kind": "qr", "ok": false, "got": null, "truth": "C0012"}
+{"cond": "jpeg q20", "kind": "header", "ok": true, "got": "C0022", "truth": "C0022"}
+{"cond": "jpeg q20", "kind": "qr", "ok": false, "got": null, "truth": "C0022"}
+{"cond": "jpeg q20", "kind": "header", "ok": true, "got": "C0012", "truth": "C0012"}
+{"cond": "jpeg q20", "kind": "qr", "ok": false, "got": null, "truth": "C0012"}
+{"cond": "jpeg q20", "kind": "header", "ok": true, "got": "C0005", "truth": "C0005"}
+{"cond": "jpeg q20", "kind": "qr", "ok": false, "got": null, "truth": "C0005"}
+{"cond": "jpeg q20", "kind": "header", "ok": true, "got": "C0005", "truth": "C0005"}
+{"cond": "jpeg q20", "kind": "qr", "ok": true, "got": "C0005", "truth": "C0005"}
+{"cond": "width 600", "kind": "header", "ok": false, "got": "C9007", "truth": "C0007"}
+{"cond": "width 600", "kind": "qr", "ok": false, "got": null, "truth": "C0007"}
+{"cond": "width 600", "kind": "header", "ok": false, "got": null, "truth": "C0000"}
+{"cond": "width 600", "kind": "qr", "ok": false, "got": null, "truth": "C0000"}
+{"cond": "width 600", "kind": "header", "ok": false, "got": null, "truth": "C0001"}
+{"cond": "width 600", "kind": "qr", "ok": false, "got": null, "truth": "C0001"}
+{"cond": "width 600", "kind": "header", "ok": false, "got": null, "truth": "C0001"}
+{"cond": "width 600", "kind": "qr", "ok": false, "got": null, "truth": "C0001"}
+{"cond": "width 600", "kind": "header", "ok": true, "got": "C0025", "truth": "C0025"}
+{"cond": "width 600", "kind": "qr", "ok": false, "got": null, "truth": "C0025"}
+{"cond": "width 600", "kind": "header", "ok": false, "got": null, "truth": "C0026"}
+{"cond": "width 600", "kind": "qr", "ok": false, "got": null, "truth": "C0026"}
+{"cond": "width 600", "kind": "header", "ok": false, "got": null, "truth": "C0002"}
+{"cond": "width 600", "kind": "qr", "ok": false, "got": null, "truth": "C0002"}
+{"cond": "width 600", "kind": "header", "ok": true, "got": "C0007", "truth": "C0007"}
+{"cond": "width 600", "kind": "qr", "ok": false, "got": null, "truth": "C0007"}
+{"cond": "width 600", "kind": "header", "ok": true, "got": "C0007", "truth": "C0007"}
+{"cond": "width 600", "kind": "qr", "ok": false, "got": null, "truth": "C0007"}
+{"cond": "width 600", "kind": "header", "ok": false, "got": null, "truth": "C0016"}
+{"cond": "width 600", "kind": "qr", "ok": false, "got": null, "truth": "C0016"}
+{"cond": "width 600", "kind": "header", "ok": false, "got": null, "truth": "C0013"}
+{"cond": "width 600", "kind": "qr", "ok": false, "got": null, "truth": "C0013"}
+{"cond": "width 600", "kind": "header", "ok": false, "got": null, "truth": "C0009"}
+{"cond": "width 600", "kind": "qr", "ok": false, "got": null, "truth": "C0009"}
+{"cond": "hard combined (WhatsApp)", "kind": "header", "ok": false, "got": null, "truth": "C0015"}
+{"cond": "hard combined (WhatsApp)", "kind": "qr", "ok": false, "got": null, "truth": "C0015"}
+{"cond": "hard combined (WhatsApp)", "kind": "header", "ok": false, "got": null, "truth": "C0024"}
+{"cond": "hard combined (WhatsApp)", "kind": "qr", "ok": false, "got": null, "truth": "C0024"}
+{"cond": "hard combined (WhatsApp)", "kind": "header", "ok": false, "got": null, "truth": "C0027"}
+{"cond": "hard combined (WhatsApp)", "kind": "qr", "ok": false, "got": null, "truth": "C0027"}
+{"cond": "hard combined (WhatsApp)", "kind": "header", "ok": false, "got": null, "truth": "C0013"}
+{"cond": "hard combined (WhatsApp)", "kind": "qr", "ok": false, "got": null, "truth": "C0013"}
+{"cond": "hard combined (WhatsApp)", "kind": "header", "ok": false, "got": null, "truth": "C0011"}
+{"cond": "hard combined (WhatsApp)", "kind": "qr", "ok": false, "got": null, "truth": "C0011"}
+{"cond": "hard combined (WhatsApp)", "kind": "header", "ok": false, "got": null, "truth": "C0018"}
+{"cond": "hard combined (WhatsApp)", "kind": "qr", "ok": false, "got": null, "truth": "C0018"}
+{"cond": "hard combined (WhatsApp)", "kind": "header", "ok": false, "got": null, "truth": "C0011"}
+{"cond": "hard combined (WhatsApp)", "kind": "qr", "ok": false, "got": null, "truth": "C0011"}
+{"cond": "hard combined (WhatsApp)", "kind": "header", "ok": false, "got": null, "truth": "C0019"}
+{"cond": "hard combined (WhatsApp)", "kind": "qr", "ok": false, "got": null, "truth": "C0019"}
+{"cond": "hard combined (WhatsApp)", "kind": "header", "ok": false, "got": null, "truth": "C0017"}
+{"cond": "hard combined (WhatsApp)", "kind": "qr", "ok": false, "got": null, "truth": "C0017"}
+{"cond": "hard combined (WhatsApp)", "kind": "header", "ok": false, "got": null, "truth": "C0016"}
+{"cond": "hard combined (WhatsApp)", "kind": "qr", "ok": false, "got": null, "truth": "C0016"}
+{"cond": "hard combined (WhatsApp)", "kind": "header", "ok": true, "got": "C0022", "truth": "C0022"}
+{"cond": "hard combined (WhatsApp)", "kind": "qr", "ok": false, "got": null, "truth": "C0022"}
+{"cond": "hard combined (WhatsApp)", "kind": "header", "ok": false, "got": null, "truth": "C0017"}
+{"cond": "hard combined (WhatsApp)", "kind": "qr", "ok": false, "got": null, "truth": "C0017"}
+{"cond": "WhatsApp", "kind": "header", "ok": true, "got": "C0026", "truth": "C0026"}
+{"cond": "WhatsApp", "kind": "qr", "ok": false, "got": null, "truth": "C0026"}
+{"cond": "WhatsApp", "kind": "header", "ok": true, "got": "C0008", "truth": "C0008"}
+{"cond": "WhatsApp", "kind": "qr", "ok": false, "got": null, "truth": "C0008"}
+{"cond": "WhatsApp", "kind": "header", "ok": true, "got": "C0017", "truth": "C0017"}
+{"cond": "WhatsApp", "kind": "qr", "ok": false, "got": null, "truth": "C0017"}
+{"cond": "WhatsApp", "kind": "header", "ok": true, "got": "C0023", "truth": "C0023"}
+{"cond": "WhatsApp", "kind": "qr", "ok": false, "got": null, "truth": "C0023"}
+{"cond": "WhatsApp", "kind": "header", "ok": true, "got": "C0016", "truth": "C0016"}
+{"cond": "WhatsApp", "kind": "qr", "ok": false, "got": null, "truth": "C0016"}
+{"cond": "WhatsApp", "kind": "header", "ok": true, "got": "C0021", "truth": "C0021"}
+{"cond": "WhatsApp", "kind": "qr", "ok": false, "got": null, "truth": "C0021"}
+{"cond": "WhatsApp", "kind": "header", "ok": true, "got": "C0010", "truth": "C0010"}
+{"cond": "WhatsApp", "kind": "qr", "ok": false, "got": null, "truth": "C0010"}
+{"cond": "WhatsApp", "kind": "header", "ok": true, "got": "C0014", "truth": "C0014"}
+{"cond": "WhatsApp", "kind": "qr", "ok": false, "got": null, "truth": "C0014"}
+{"cond": "WhatsApp", "kind": "header", "ok": true, "got": "C0000", "truth": "C0000"}
+{"cond": "WhatsApp", "kind": "qr", "ok": false, "got": null, "truth": "C0000"}
+{"cond": "WhatsApp", "kind": "header", "ok": true, "got": "C0029", "truth": "C0029"}
+{"cond": "WhatsApp", "kind": "qr", "ok": false, "got": null, "truth": "C0029"}
+{"cond": "WhatsApp", "kind": "header", "ok": true, "got": "C0015", "truth": "C0015"}
+{"cond": "WhatsApp", "kind": "qr", "ok": false, "got": null, "truth": "C0015"}
+{"cond": "WhatsApp", "kind": "header", "ok": true, "got": "C0002", "truth": "C0002"}
+{"cond": "WhatsApp", "kind": "qr", "ok": false, "got": null, "truth": "C0002"}

@@ -25,22 +25,30 @@ class Decoder:
         self.marked_gap = self.bank.S_gap[0] != 0 if len(centre_ids) else None
 
     # ------------------------------------------------------------------
-    def decode(self, img, use_gap=True, use_line=True, debug=False, lang=None, localiser="ocr"):
+    def decode(self, img, use_gap=True, use_line=True, debug=False, lang=None, localiser="ocr", ocr_scales=(1.5,), deskew=False):
         t0 = time.time()
         L = self.layout
         g = locate.to_gray(img)
         norm = locate.flatten_illumination(g)
         res = dict(accept=False, reason=None, ranking=[], timing={})
+        if deskew:                                   # v2: undo large in-plane rotation before OCR
+            ang = locate.estimate_skew(norm)
+            res["skew_deg"] = ang
+            if abs(ang) > 2.0:
+                norm = locate.rotate_expand(norm, ang)
         lang = lang or _LANG[L.get("lang", "en")]
-        pairs, rot = [], 0
-        for k in (0, 1, 3, 2):            # upright first; then try 90 / 270 / 180 degree rotations
+        best_all = (0, [], [], 0, norm)           # (n_pairs, ocr, pairs, rotation k, image)
+        for k in (0, 1, 3, 2):                    # upright first; 90 / 270 / 180 degree rotations only if upright found (almost) nothing
             im_k = norm if k == 0 else np.ascontiguousarray(np.rot90(norm, k))
-            ocr = locate.ocr_words(im_k, lang)
-            pairs = locate.match_to_master(ocr, L)
-            if len(pairs) >= 12:
-                if k:
-                    norm, rot = im_k, 90 * k
+            for sc in (ocr_scales if k == 0 else ocr_scales[:1]):   # v2: retry OCR at larger scales for small / blurred text
+                ocr_ = locate.ocr_words(im_k, lang, upscale=sc)
+                pairs_ = locate.match_to_master(ocr_, L)
+                if len(pairs_) > best_all[0]: best_all = (len(pairs_), ocr_, pairs_, k, im_k)
+                if len(pairs_) >= 12: break
+            if best_all[0] >= 6:
                 break
+        _, ocr, pairs, k_, norm = best_all
+        rot = 90 * k_
         res["timing"]["ocr"] = time.time() - t0
         res["rotated_by"] = rot
         if len(pairs) < 4:

@@ -7,12 +7,23 @@ from common.config import SEED, RASTER_SCALE
 from common.keys import SignBank, word_offsets
 from embed.typeset import render, rasterise
 from degrade.simulate import Degrade, photograph, crop_for_lines
+from degrade.attacks import apply_post
 from decode.pipeline import Decoder, build_master
 from decode import score
 
 KEY = "leaktrace-experiment-key-v1"          # experiments use a different key than the dev key used while building
 CACHE = "outputs/cache/copies"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+def print_raster(pdf_bytes, dpi, S=RASTER_SCALE):
+    """Laser-printer model: the page is rasterised to BILEVEL dots at the printer resolution (so every ink edge snaps to the
+    dot grid: 0.12 pt at 600 dpi, 0.24 pt at 300 dpi), then resampled to the working scale for the photo simulator."""
+    f = dpi / 72.0
+    out = []
+    for p in rasterise(pdf_bytes, scale=f):
+        b = np.where(p > 127, 255, 0).astype(np.uint8)
+        out.append(cv2.resize(b, None, fx=S / f, fy=S / f, interpolation=cv2.INTER_AREA))
+    return out
 
 class Env:
     def __init__(self, lang="en", n_centres=200, key=KEY, delta=0.30, eps=0.30):
@@ -27,14 +38,16 @@ class Env:
     def decoder(self, delta, eps):
         d = Decoder.__new__(Decoder); d.__dict__.update(self.dec.__dict__); d.delta, d.eps = delta, eps; return d
 
-    def copy_pages(self, ci, delta=None, eps=None, jitter=0.0, jseed=0, mix=None):
+    def copy_pages(self, ci, delta=None, eps=None, jitter=0.0, jseed=0, mix=None, print_dpi=None):
         """Rasters of centre ci's copy.  mix: list of (centre_index) for collusion -> ('avg'|'mix', idxs)."""
         delta = self.delta if delta is None else delta; eps = self.eps if eps is None else eps
-        tag = hashlib.sha1(json.dumps([self.lang, self.key, ci, delta, eps, jitter, jseed, mix], default=str).encode()).hexdigest()[:14]
+        tag = hashlib.sha1(json.dumps([self.lang, self.key, ci, delta, eps, jitter, jseed, mix, print_dpi], default=str).encode()).hexdigest()[:14]
         paths = [f"{CACHE}/{tag}_p{p}.png" for p in range(len(self.layout["pages"]))]
         if all(os.path.exists(p) for p in paths):
             return [cv2.imread(p, 0) for p in paths]
-        if mix is None:
+        if mix is None and ci >= len(self.ids):          # a centre that is NOT in the candidate list
+            off = word_offsets(self.layout, SignBank(self.key, self.layout, [f"UNLISTED-{ci}"]), 0, delta, eps)
+        elif mix is None:
             off = word_offsets(self.layout, self.bank, ci, delta, eps)
         else:
             kind, idxs = mix
@@ -54,7 +67,7 @@ class Env:
             rng = np.random.default_rng(jseed + 99)
             off = {w: (dx + rng.normal(0, jitter), dy + rng.normal(0, jitter)) for w, (dx, dy) in off.items()}
         pdf, _ = render(self.paper, off)
-        pages = rasterise(pdf)
+        pages = print_raster(pdf, print_dpi) if print_dpi else rasterise(pdf)
         for p, im in zip(paths, pages):
             cv2.imwrite(p, im)
         return pages
@@ -70,7 +83,8 @@ def variants(dbg, env, delta, eps):
         T, den = score.scores(env.bank, dbg["r_gap"], dbg["q_gap"], dbg["r_line"], dbg["q_line"], env.dec.w_line, ug, ul)
         T0, _ = score.scores(env.dec.null, dbg["r_gap"], dbg["q_gap"], dbg["r_line"], dbg["q_line"], env.dec.w_line, ug, ul)
         d = score.decide(T, T0, env.dec.alpha, min_den=6.0, den=den)
-        out[name] = dict(best=d["best"], accept=d["accept"], p_best=d["p_best"], z=d["z_best"], T_best=d["T_best"], sd=d["sigma_null"], den=float(den), T=T)
+        zall = (T - T0.mean()) / (T0.std() + 1e-12)
+        out[name] = dict(best=d["best"], accept=d["accept"], p_best=d["p_best"], z=d["z_best"], T_best=d["T_best"], sd=d["sigma_null"], den=float(den), T=T, zall=zall)
     return out
 
 _ENVS = {}
@@ -88,14 +102,18 @@ def run_one(job):
         if job.get("plain"):
             pages = env.master
         else:
-            pages = env.copy_pages(job["ci"], delta, eps, job.get("jitter", 0.0), job.get("jseed", 0), job.get("mix"))
+            pages = env.copy_pages(job["ci"], delta, eps, job.get("jitter", 0.0), job.get("jseed", 0), job.get("mix"), job.get("print_dpi"))
         d = Degrade(**job["deg"])
         crop = job.get("crop_lines")
         if crop:
             d.crop = crop_for_lines(env.layout, job["page"], crop[0], crop[1], full_width=job.get("crop_full_width", True))
+        if job.get("crop_rect"):
+            d.crop = tuple(job["crop_rect"])
         img, info = photograph(pages[job["page"]], d, env.layout["page_size_pt"])
+        for kind, p_ in job.get("post", []):
+            img = apply_post(img, kind, p_)
         dec = env.decoder(delta, eps)
-        r = dec.decode(img, debug=True)
+        r = dec.decode(img, debug=True, ocr_scales=tuple(job.get("ocr_scales", (1.5,))), deskew=bool(job.get("deskew", False)))
         rec = dict(job={k: v for k, v in job.items() if k not in ("deg",)}, deg=job["deg"], accept=r["accept"], reason=r.get("reason"),
                    best=r.get("best_centre"), p_best=r.get("p_best"), z=r.get("z_best"), T_best=r.get("T_best"), T_second=r.get("T_second"),
                    sd=r.get("sigma_null"), n_gaps=r.get("n_gaps"), n_lines=r.get("n_lines"), inl=r.get("n_inliers"),
@@ -103,7 +121,9 @@ def run_one(job):
         dbg = r.get("_debug")
         if dbg is not None:
             v = variants(dbg, env, delta, eps)
-            rec["variants"] = {k: {kk: vv for kk, vv in x.items() if kk != "T"} for k, x in v.items()}
+            rec["variants"] = {k: {kk: vv for kk, vv in x.items() if kk not in ("T", "zall")} for k, x in v.items()}
+            zb = v["both"]["zall"]; top = np.argsort(-zb)[:8]
+            rec["top_z"] = [(int(i), float(zb[i])) for i in top]
             tgt = job.get("truth_idx")
             if tgt:
                 rec["T_true"] = [float(v["both"]["T"][i]) for i in tgt]

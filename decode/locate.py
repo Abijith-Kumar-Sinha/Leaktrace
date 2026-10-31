@@ -74,3 +74,22 @@ def estimate_H(ocr, pairs, layout, ransac_pt=3.0):
         return None, 0, pairs
     inl = inl.ravel().astype(bool)
     return H, int(inl.sum()), [p for p, k in zip(pairs, inl) if k]
+
+
+def estimate_skew(gray, max_angle=45.0):
+    """In-plane rotation of the text lines in degrees (positive = counter-clockwise) by maximising row-profile variance."""
+    f = 900.0 / max(gray.shape[:2]); small = cv2.resize(gray, None, fx=f, fy=f, interpolation=cv2.INTER_AREA)
+    ink = cv2.adaptiveThreshold(small, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 31, 12)
+    h, w = ink.shape; c = (w / 2, h / 2)
+    def score(a):
+        M = cv2.getRotationMatrix2D(c, a, 1.0); r = cv2.warpAffine(ink, M, (w, h), flags=cv2.INTER_NEAREST)
+        return float(np.var(r.sum(1).astype(np.float64)))
+    coarse = np.arange(-max_angle, max_angle + 0.01, 1.0); a0 = coarse[int(np.argmax([score(a) for a in coarse]))]
+    fine = np.arange(a0 - 1.0, a0 + 1.01, 0.2)
+    return float(fine[int(np.argmax([score(a) for a in fine]))])
+
+def rotate_expand(img, angle):
+    h, w = img.shape[:2]; M = cv2.getRotationMatrix2D((w / 2, h / 2), angle, 1.0)
+    c, s_ = abs(M[0, 0]), abs(M[0, 1]); nw, nh = int(h * s_ + w * c), int(h * c + w * s_)
+    M[0, 2] += nw / 2 - w / 2; M[1, 2] += nh / 2 - h / 2
+    return cv2.warpAffine(img, M, (nw, nh), flags=cv2.INTER_CUBIC, borderValue=int(np.median(img)))

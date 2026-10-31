@@ -1,0 +1,4 @@
+photo_id,file,subset,paper_lang,page,centre_id,is_plain_control,printer_model,paper_stock,phone_model,distance_cm,angle_deg,lighting,framing,crop_lines,whatsapp,notes
+P0001,originals/P0001.jpg,original,en,1,C0003,0,HP LaserJet M404,75gsm,Pixel 7,40,0,daylight,full,,0,example row
+P0001_wa,whatsapp/P0001_wa.jpg,whatsapp,en,1,C0003,0,HP LaserJet M404,75gsm,Pixel 7,40,0,daylight,full,,1,same photo after WhatsApp
+P0002,originals/P0002.jpg,original,en,2,,1,HP LaserJet M404,75gsm,Pixel 7,40,15,tube,crop,6,0,plain master (negative control)

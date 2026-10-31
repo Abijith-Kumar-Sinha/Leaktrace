@@ -39,7 +39,7 @@ def paper_units(paper: dict, max_questions: int | None = None):
         u.append(("q", f"{i}. {q}"))
     return u
 
-def build_html(paper: dict, offsets: dict | None = None, max_questions: int | None = None):
+def build_html(paper: dict, offsets: dict | None = None, max_questions: int | None = None, decor_html: str = "", decor_css: str = ""):
     units = paper_units(paper, max_questions)
     parts, words, g = [], [], 0
     for kind, text in units:
@@ -59,12 +59,12 @@ def build_html(paper: dict, offsets: dict | None = None, max_questions: int | No
                "ins": "div class=\"ins\"", "q": "p class=\"q\""}[kind]
         close = tag.split()[0]
         parts.append(f"<{tag}>{inner}</{close}>")
-    doc = f'<!doctype html><html lang="{paper["lang"]}"><head><meta charset="utf-8"><style>{_css(paper["lang"])}</style></head><body>{"".join(parts)}</body></html>'
+    doc = f'<!doctype html><html lang="{paper["lang"]}"><head><meta charset="utf-8"><style>{_css(paper["lang"])}{decor_css}</style></head><body>{decor_html}{"".join(parts)}</body></html>'
     return doc, words
 
-def render(paper, offsets=None, max_questions=None):
+def render(paper, offsets=None, max_questions=None, decor_html="", decor_css=""):
     """-> (pdf_bytes, layout dict).  Layout is read from WeasyPrint's laid-out box tree."""
-    html_s, words = build_html(paper, offsets, max_questions)
+    html_s, words = build_html(paper, offsets, max_questions, decor_html, decor_css)
     document = HTML(string=html_s).render()
     layout = extract_layout(document, words)
     layout["lang"] = paper["lang"]

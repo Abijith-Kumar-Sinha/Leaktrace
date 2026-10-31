@@ -1,0 +1,74 @@
+[
+ {
+  "variant": "font 10.5pt / line-height 1.5",
+  "page": 0,
+  "accept": false,
+  "reason": "rejected: no statistically valid fingerprint (best score indistinguishable from wrong keys)",
+  "best": "C0056",
+  "p_best": 0.24713534522797956
+ },
+ {
+  "variant": "font 10.5pt / line-height 1.5",
+  "page": 1,
+  "accept": false,
+  "reason": "rejected: no statistically valid fingerprint (best score indistinguishable from wrong keys)",
+  "best": "C0127",
+  "p_best": 0.5498625343664084
+ },
+ {
+  "variant": "font 10.5pt / line-height 1.5",
+  "page": 2,
+  "accept": false,
+  "reason": "rejected: no statistically valid fingerprint (best score indistinguishable from wrong keys)",
+  "best": "C0143",
+  "p_best": 1.0
+ },
+ {
+  "variant": "font 11.5pt / line-height 1.5",
+  "page": 0,
+  "accept": false,
+  "reason": "rejected: no statistically valid fingerprint (best score indistinguishable from wrong keys)",
+  "best": "C0157",
+  "p_best": 1.0
+ },
+ {
+  "variant": "font 11.5pt / line-height 1.5",
+  "page": 1,
+  "accept": false,
+  "reason": "rejected: no statistically valid fingerprint (best score indistinguishable from wrong keys)",
+  "best": "C0059",
+  "p_best": 0.5998500374906273
+ },
+ {
+  "variant": "font 11.5pt / line-height 1.5",
+  "page": 2,
+  "accept": false,
+  "reason": "rejected: no statistically valid fingerprint (best score indistinguishable from wrong keys)",
+  "best": "C0146",
+  "p_best": 0.29992501874531363
+ },
+ {
+  "variant": "font 11.0pt / line-height 1.7",
+  "page": 0,
+  "accept": false,
+  "reason": "rejected: no statistically valid fingerprint (best score indistinguishable from wrong keys)",
+  "best": "C0114",
+  "p_best": 1.0
+ },
+ {
+  "variant": "font 11.0pt / line-height 1.7",
+  "page": 1,
+  "accept": false,
+  "reason": "rejected: no statistically valid fingerprint (best score indistinguishable from wrong keys)",
+  "best": "C0045",
+  "p_best": 0.5498625343664084
+ },
+ {
+  "variant": "font 11.0pt / line-height 1.7",
+  "page": 2,
+  "accept": false,
+  "reason": "rejected: no statistically valid fingerprint (best score indistinguishable from wrong keys)",
+  "best": "C0134",
+  "p_best": 1.0
+ }
+]
