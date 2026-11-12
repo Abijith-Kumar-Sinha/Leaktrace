@@ -14,11 +14,13 @@ class Decoder:
         self.layout, self.master_pages = layout, master_pages
         self.key, self.delta, self.eps, self.alpha, self.w_line = key, delta, eps, alpha, w_line
         self.bank = SignBank(key, layout, centre_ids)
-        h = hashlib.sha1((str(key) + str(len(layout["words"])) + str(n_null)).encode()).hexdigest()[:12]
+        sig = repr((list(self.bank.gap_ids), list(self.bank.line_ids)))   # layout-aware cache key
+        h = hashlib.sha1((str(key) + sig + str(n_null)).encode()).hexdigest()[:12]
         os.makedirs(cache_dir, exist_ok=True)
         p = os.path.join(cache_dir, f"null_{h}.npz")
-        if os.path.exists(p):
-            z = np.load(p); self.null = _NB(z["g"], z["l"])
+        z = np.load(p) if os.path.exists(p) else None
+        if z is not None and z["g"].shape[1] == self.bank.S_gap.shape[1] and z["l"].shape[1] == self.bank.S_line.shape[1]:
+            self.null = _NB(z["g"], z["l"])
         else:
             nb = SignBank(key, layout, [f"__null__{i}" for i in range(n_null)])
             np.savez_compressed(p, g=nb.S_gap, l=nb.S_line); self.null = _NB(nb.S_gap, nb.S_line)

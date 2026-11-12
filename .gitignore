@@ -3,3 +3,7 @@ __pycache__/
 node_modules/
 *.pyc
 web/dist/
+.venv/
+outputs/test_cases/
+outputs/test_cases/
+outputs/cases/
