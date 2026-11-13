@@ -129,7 +129,7 @@ function Histogram({ t, hist, rows, zAlpha }) {
     <line x1={x(zAlpha)} x2={x(zAlpha)} y1={T - 8} y2={H - B} className="thr" />
     <text x={x(zAlpha) + 7} y={T + 4} className="thr-l">z = {zAlpha.toFixed(1)}</text>
     {best && <g className="hit"><rect x={x(Math.min(best.z, zMax)) - 9} width="18" y={T + 10} height={H - B - T - 10} rx="2" fill={best.z >= zAlpha ? 'url(#hitg)' : '#58707C'} />
-      <text x={x(Math.min(best.z, zMax))} y={T + 2} className="hit-l" textAnchor="middle">{best.centre}</text></g>}
+      <text x={x(Math.min(best.z, zMax))} y={T + 2} className={best.z >= zAlpha ? "hit-l" : "hit-l no"} textAnchor="middle">{best.centre}</text></g>}
     <line x1={L} x2={W - R} y1={H - B} y2={H - B} className="axis" />
     {ticks.map(v => <text key={v} x={x(v)} y={H - B + 22} className="tick" textAnchor="middle">{v}</text>)}
     <text x={(L + W - R) / 2} y={H - 6} className="ax-l" textAnchor="middle">{t.zAxis}</text>

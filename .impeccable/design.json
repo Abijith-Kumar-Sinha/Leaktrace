@@ -1,0 +1,519 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-13T13:26:19+00:00",
+  "title": "Design System: LeakTrace",
+  "extensions": {
+    "colorMeta": {
+      "ground-deep": {
+        "role": "neutral",
+        "displayName": "Abyss",
+        "canonical": "#021A22",
+        "tonalRamp": [
+          "#000E13",
+          "#102931",
+          "#2D464F",
+          "#4C6670",
+          "#6C8792",
+          "#8EAAB5",
+          "#B2CFDA",
+          "#D8F4FE"
+        ]
+      },
+      "ground-mid": {
+        "role": "neutral",
+        "displayName": "Midnight Teal",
+        "canonical": "#032A33",
+        "tonalRamp": [
+          "#000E13",
+          "#032A33",
+          "#244852",
+          "#436872",
+          "#648994",
+          "#86ACB7",
+          "#A9D1DC",
+          "#D6F5FE"
+        ]
+      },
+      "ground-blue": {
+        "role": "neutral",
+        "displayName": "Peacock Dusk",
+        "canonical": "#04263A",
+        "tonalRamp": [
+          "#000D18",
+          "#06283C",
+          "#25465C",
+          "#44667D",
+          "#65879F",
+          "#87AAC4",
+          "#AACFE9",
+          "#E0F1FE"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Slate Teal",
+        "canonical": "#08303D",
+        "tonalRamp": [
+          "#000D14",
+          "#012A37",
+          "#224855",
+          "#426776",
+          "#638998",
+          "#85ACBC",
+          "#A8D1E1",
+          "#D9F4FF"
+        ]
+      },
+      "panel-raised": {
+        "role": "neutral",
+        "displayName": "Raised Slate",
+        "canonical": "#0A3948",
+        "tonalRamp": [
+          "#000D14",
+          "#042A36",
+          "#1C4858",
+          "#3D6878",
+          "#5E8A9B",
+          "#80ADBF",
+          "#A3D1E4",
+          "#DAF3FE"
+        ]
+      },
+      "panel-high": {
+        "role": "neutral",
+        "displayName": "High Slate",
+        "canonical": "#0D4556",
+        "tonalRamp": [
+          "#000D13",
+          "#012A36",
+          "#12495A",
+          "#36697B",
+          "#578B9E",
+          "#7AAEC2",
+          "#9DD3E7",
+          "#D9F4FE"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Paper Ink",
+        "canonical": "#E8F0F2",
+        "tonalRamp": [
+          "#070C0D",
+          "#202628",
+          "#3D4345",
+          "#5C6364",
+          "#7D8486",
+          "#9FA7A8",
+          "#C3CBCD",
+          "#E8F0F2"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#A3BCC6",
+        "tonalRamp": [
+          "#000E14",
+          "#132830",
+          "#30464E",
+          "#4F656E",
+          "#6F8790",
+          "#91AAB3",
+          "#B5CED8",
+          "#D9F4FE"
+        ]
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Fog",
+        "canonical": "#7795A2",
+        "tonalRamp": [
+          "#000D14",
+          "#0D2933",
+          "#2B4652",
+          "#496672",
+          "#6A8894",
+          "#8CABB8",
+          "#AFCFDD",
+          "#DAF3FE"
+        ]
+      },
+      "dark-ink": {
+        "role": "neutral",
+        "displayName": "Dark Ink",
+        "canonical": "#0F1419",
+        "tonalRamp": [
+          "#070C10",
+          "#20262B",
+          "#3D4349",
+          "#5C6268",
+          "#7D838A",
+          "#9FA6AD",
+          "#C3CAD1",
+          "#E8EFF7"
+        ]
+      },
+      "saffron": {
+        "role": "primary",
+        "displayName": "Verdict Saffron",
+        "canonical": "#FFB547",
+        "tonalRamp": [
+          "#130900",
+          "#352001",
+          "#5A3B07",
+          "#825711",
+          "#AF750D",
+          "#DC9416",
+          "#FFBA5A",
+          "#FEEBD5"
+        ]
+      },
+      "amber": {
+        "role": "primary",
+        "displayName": "Ember Amber",
+        "canonical": "#FF9446",
+        "tonalRamp": [
+          "#170600",
+          "#3C1B02",
+          "#683100",
+          "#954A03",
+          "#C36616",
+          "#EF8635",
+          "#FFB788",
+          "#FEEADE"
+        ]
+      },
+      "coral": {
+        "role": "secondary",
+        "displayName": "Signal Coral",
+        "canonical": "#F2674F",
+        "tonalRamp": [
+          "#1E0100",
+          "#4A0701",
+          "#7B1606",
+          "#AF2610",
+          "#D74E38",
+          "#FA7962",
+          "#FEB4A5",
+          "#FEE9E5"
+        ]
+      },
+      "coral-ink": {
+        "role": "secondary",
+        "displayName": "Coral Ink",
+        "canonical": "#FF8E7A",
+        "tonalRamp": [
+          "#1D0100",
+          "#4B0601",
+          "#7C1305",
+          "#A23A2A",
+          "#C85D4B",
+          "#F0806D",
+          "#FCB5A7",
+          "#FFE9E5"
+        ]
+      },
+      "emerald": {
+        "role": "tertiary",
+        "displayName": "Agreement Emerald",
+        "canonical": "#14C79A",
+        "tonalRamp": [
+          "#000F09",
+          "#042D21",
+          "#034E3B",
+          "#0B7257",
+          "#219876",
+          "#2EBF96",
+          "#4DE7B8",
+          "#C2FEE6"
+        ]
+      },
+      "teal": {
+        "role": "tertiary",
+        "displayName": "Lagoon Teal",
+        "canonical": "#1FA9A0",
+        "tonalRamp": [
+          "#000F0D",
+          "#032C29",
+          "#0C4C48",
+          "#01716A",
+          "#18958D",
+          "#3BBBB2",
+          "#67E0D6",
+          "#B6FFF7"
+        ]
+      },
+      "peacock": {
+        "role": "tertiary",
+        "displayName": "Peacock Blue",
+        "canonical": "#1E6FB5",
+        "tonalRamp": [
+          "#000C1C",
+          "#002647",
+          "#034476",
+          "#0C64A9",
+          "#3986CE",
+          "#5EAAF5",
+          "#A1CEFC",
+          "#E3F0FE"
+        ]
+      },
+      "lilac": {
+        "role": "tertiary",
+        "displayName": "Statistics Lilac",
+        "canonical": "#B7A8FF",
+        "tonalRamp": [
+          "#0E0129",
+          "#290F5A",
+          "#44317D",
+          "#6352A1",
+          "#8373C6",
+          "#A696EC",
+          "#C9C0FF",
+          "#EEECFF"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page title only."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "KPI values; tabular."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Panel titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Tables and running text; intros cap at 72ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Chips, pills, sub-headings, field labels."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "Generated case ID only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "panel-ambient",
+        "value": "0 1px 0 rgba(255,255,255,.04) inset, 0 18px 40px -22px rgba(0,0,0,.65)",
+        "purpose": "Every panel and KPI tile."
+      },
+      {
+        "name": "verdict-glow",
+        "value": "0 22px 48px -24px rgba(255,140,60,.7)",
+        "purpose": "Accept verdict tile only."
+      },
+      {
+        "name": "primary-glow",
+        "value": "0 14px 30px -16px rgba(255,150,60,.8)",
+        "purpose": "Primary button."
+      },
+      {
+        "name": "drawer",
+        "value": "30px 0 60px -20px rgba(0,0,0,.7)",
+        "purpose": "Mobile nav drawer."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Histogram hit-bar climb (1.1s, .55s delay) and drawer slide (.3s)."
+      },
+      {
+        "name": "settle",
+        "value": "opacity .45s ease-out",
+        "purpose": "KPI row, evidence/distribution and ranked table fade in when a result arrives."
+      },
+      {
+        "name": "rise",
+        "value": ".5s ease-out 1.25s; translateY(10px) + blur(4px) to rest",
+        "purpose": "Hit-bar label after the climb."
+      },
+      {
+        "name": "state",
+        "value": ".2s",
+        "purpose": "Hover colour/background transitions; button lift .15s."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation and transition none",
+        "purpose": "prefers-reduced-motion: reduce disables all."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1280px"
+      },
+      {
+        "name": "stack",
+        "value": "1100px"
+      },
+      {
+        "name": "drawer",
+        "value": "900px"
+      },
+      {
+        "name": "phone",
+        "value": "560px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one action per form; saffron sweep with warm glow.",
+      "html": "<button class=\"ds-btn-primary\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg>Analyse photo</button>",
+      "css": ":host{--g1:#021A22;--panel:#08303D;--panel-2:#0A3948;--panel-hi:#0D4556;--line:rgba(122,196,214,.16);--line-2:rgba(122,196,214,.28);--ink:#E8F0F2;--ink-2:#A3BCC6;--ink-3:#7795A2;--dark-ink:#0F1419;--saffron:#FFB547;--coral:#F2674F;--coral-ink:#FF8E7A;--emerald:#14C79A;--teal:#1FA9A0;--lilac:#B7A8FF;--sans:'Oxygen','Mukta',system-ui,sans-serif} .ds-btn-primary{border:0;color:var(--dark-ink);background:linear-gradient(100deg,#FFCB5C,#FFA548 60%,#F7834E);box-shadow:0 14px 30px -16px rgba(255,150,60,.8);font:700 16px var(--sans);display:inline-flex;align-items:center;gap:9px;height:46px;padding:0 22px;border-radius:10px;cursor:pointer;transition:transform .15s,filter .2s,background .2s} .ds-btn-primary:hover{filter:brightness(1.06);transform:translateY(-1px)} .ds-btn-primary:focus-visible{outline:2px solid var(--saffron);outline-offset:2px} .ds-btn-primary:disabled{background:rgba(4,30,38,.6);border:1px solid var(--line-2);color:var(--ink-3);box-shadow:none;transform:none;filter:none;cursor:not-allowed}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary actions such as New investigation.",
+      "html": "<button class=\"ds-btn-ghost\">New investigation</button>",
+      "css": ":host{--g1:#021A22;--panel:#08303D;--panel-2:#0A3948;--panel-hi:#0D4556;--line:rgba(122,196,214,.16);--line-2:rgba(122,196,214,.28);--ink:#E8F0F2;--ink-2:#A3BCC6;--ink-3:#7795A2;--dark-ink:#0F1419;--saffron:#FFB547;--coral:#F2674F;--coral-ink:#FF8E7A;--emerald:#14C79A;--teal:#1FA9A0;--lilac:#B7A8FF;--sans:'Oxygen','Mukta',system-ui,sans-serif} .ds-btn-ghost{border:1px solid var(--line-2);background:rgba(13,43,59,.8);color:var(--ink);font:700 16px var(--sans);display:inline-flex;align-items:center;gap:9px;height:46px;padding:0 22px;border-radius:10px;cursor:pointer;transition:transform .15s,filter .2s,background .2s} .ds-btn-ghost:hover{background:var(--panel-hi)} .ds-btn-ghost:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}"
+    },
+    {
+      "name": "Key Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Labelled password-style input; saffron border on focus.",
+      "html": "<label class=\"ds-field\"><span>Secret key</span><span class=\"ds-inp\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M2.6 18.4A2 2 0 0 0 2 19.8V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.2a2 2 0 0 0 1.4-.6l.8-.8a6.5 6.5 0 1 0-4-4z\"/><circle cx=\"16.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\"/></svg><input type=\"password\" value=\"examboard-2026\"></span><small>At least 12 characters</small></label>",
+      "css": ":host{--g1:#021A22;--panel:#08303D;--panel-2:#0A3948;--panel-hi:#0D4556;--line:rgba(122,196,214,.16);--line-2:rgba(122,196,214,.28);--ink:#E8F0F2;--ink-2:#A3BCC6;--ink-3:#7795A2;--dark-ink:#0F1419;--saffron:#FFB547;--coral:#F2674F;--coral-ink:#FF8E7A;--emerald:#14C79A;--teal:#1FA9A0;--lilac:#B7A8FF;--sans:'Oxygen','Mukta',system-ui,sans-serif} .ds-field{display:flex;flex-direction:column;gap:7px;font:15px var(--sans);color:var(--ink-2);width:320px} .ds-field>span:first-child{color:#D7E4E9} .ds-field small{font-size:13.5px;color:var(--ink-3)} .ds-inp{display:flex;align-items:center;gap:10px;height:44px;padding:0 12px;border:1px solid var(--line-2);border-radius:9px;background:rgba(4,18,27,.6);color:var(--ink-3)} .ds-inp input{flex:1;min-width:0;border:0;background:none;color:var(--ink);font:16px var(--sans);outline:none;caret-color:var(--saffron)} .ds-inp:focus-within{border-color:var(--saffron)}"
+    },
+    {
+      "name": "Rail Navigation",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "Left rail items; active gets a saffron-to-peacock wash and saffron icon.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z\"/><path d=\"M14 2v5h6\"/></svg><span>Prepare paper</span></a><a href=\"#\" class=\"on\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg><span>Investigate</span></a></nav>",
+      "css": ":host{--g1:#021A22;--panel:#08303D;--panel-2:#0A3948;--panel-hi:#0D4556;--line:rgba(122,196,214,.16);--line-2:rgba(122,196,214,.28);--ink:#E8F0F2;--ink-2:#A3BCC6;--ink-3:#7795A2;--dark-ink:#0F1419;--saffron:#FFB547;--coral:#F2674F;--coral-ink:#FF8E7A;--emerald:#14C79A;--teal:#1FA9A0;--lilac:#B7A8FF;--sans:'Oxygen','Mukta',system-ui,sans-serif} .ds-nav{display:flex;flex-direction:column;gap:2px;width:236px;padding:8px;background:#06202A} .ds-nav a{display:flex;align-items:center;gap:15px;height:49px;padding:0 18px;border-radius:9px;color:#D9E5EA;text-decoration:none;font:16.5px var(--sans);transition:background .2s} .ds-nav a svg{color:var(--ink-2)} .ds-nav a:hover{background:rgba(122,196,214,.07)} .ds-nav a.on{background:linear-gradient(90deg,rgba(255,181,71,.13),rgba(30,111,181,.16) 70%,rgba(30,111,181,.10));color:#fff} .ds-nav a.on svg{color:var(--saffron)} .ds-nav a:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}"
+    },
+    {
+      "name": "Status Pills",
+      "kind": "chip",
+      "refersTo": "pill-significant",
+      "description": "Significant (saffron, accepted centre only) and Below threshold (neutral).",
+      "html": "<span class=\"ds-pill ds-gold\">Significant</span> <span class=\"ds-pill\">Below threshold</span>",
+      "css": ":host{--g1:#021A22;--panel:#08303D;--panel-2:#0A3948;--panel-hi:#0D4556;--line:rgba(122,196,214,.16);--line-2:rgba(122,196,214,.28);--ink:#E8F0F2;--ink-2:#A3BCC6;--ink-3:#7795A2;--dark-ink:#0F1419;--saffron:#FFB547;--coral:#F2674F;--coral-ink:#FF8E7A;--emerald:#14C79A;--teal:#1FA9A0;--lilac:#B7A8FF;--sans:'Oxygen','Mukta',system-ui,sans-serif} .ds-pill{display:inline-block;padding:0 12px;line-height:1.45;border-radius:99px;border:1px solid var(--line-2);background:rgba(13,43,59,.8);color:#CFDDE3;font:15px var(--sans);white-space:nowrap} .ds-gold{border-color:transparent;background:linear-gradient(90deg,rgba(255,181,71,.85),rgba(255,148,70,.85));color:var(--dark-ink);font-weight:700}"
+    },
+    {
+      "name": "Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Slate-teal panel with the iridescent hairline and ambient shadow.",
+      "html": "<section class=\"ds-panel\"><h2>Ranked centres</h2><p>Showing top 5 of 200 centres</p></section>",
+      "css": ":host{--g1:#021A22;--panel:#08303D;--panel-2:#0A3948;--panel-hi:#0D4556;--line:rgba(122,196,214,.16);--line-2:rgba(122,196,214,.28);--ink:#E8F0F2;--ink-2:#A3BCC6;--ink-3:#7795A2;--dark-ink:#0F1419;--saffron:#FFB547;--coral:#F2674F;--coral-ink:#FF8E7A;--emerald:#14C79A;--teal:#1FA9A0;--lilac:#B7A8FF;--sans:'Oxygen','Mukta',system-ui,sans-serif} .ds-panel{position:relative;width:340px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,var(--panel-2),var(--panel));box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 18px 40px -22px rgba(0,0,0,.65);font-family:var(--sans);color:var(--ink)} .ds-panel::before{content:'';position:absolute;inset:-1px;border-radius:inherit;padding:1px;pointer-events:none;background:linear-gradient(135deg,rgba(64,224,196,.55),rgba(30,111,181,.12) 38%,rgba(30,111,181,.08) 62%,rgba(170,140,255,.45));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude} .ds-panel h2{margin:0;font-size:20px;line-height:1.15} .ds-panel p{margin:6px 0 0;font-size:15px;color:var(--ink-2)}"
+    },
+    {
+      "name": "Verdict Tile",
+      "kind": "custom",
+      "refersTo": "verdict-accept",
+      "description": "First KPI; saffron-to-coral sweep on accept, slate with coral cross on reject.",
+      "html": "<div class=\"ds-verdict\"><span class=\"ds-vicon\"><svg width=\"30\" height=\"30\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg></span><span><strong>Fingerprint found</strong><span>Statistically significant match</span></span></div>",
+      "css": ":host{--g1:#021A22;--panel:#08303D;--panel-2:#0A3948;--panel-hi:#0D4556;--line:rgba(122,196,214,.16);--line-2:rgba(122,196,214,.28);--ink:#E8F0F2;--ink-2:#A3BCC6;--ink-3:#7795A2;--dark-ink:#0F1419;--saffron:#FFB547;--coral:#F2674F;--coral-ink:#FF8E7A;--emerald:#14C79A;--teal:#1FA9A0;--lilac:#B7A8FF;--sans:'Oxygen','Mukta',system-ui,sans-serif} .ds-verdict{display:flex;align-items:center;gap:16px;width:300px;min-height:100px;padding:14px 20px;border-radius:12px;color:var(--dark-ink);font-family:var(--sans);background:linear-gradient(105deg,#FFCB5C 0%,#FFA548 46%,#F57A50 78%,#F2674F 100%);box-shadow:0 22px 48px -24px rgba(255,140,60,.7)} .ds-vicon{width:54px;height:54px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--dark-ink);color:var(--saffron)} .ds-verdict strong{display:block;font-size:24px;line-height:1.2} .ds-verdict strong+span{font-size:15.5px;opacity:.88}"
+    },
+    {
+      "name": "Statistic KPI",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Numeral tile tinted by meaning; lilac for statistics.",
+      "html": "<div class=\"ds-kpi\"><span class=\"ds-kl\">z · margin</span><span class=\"ds-kv\">9.0 <em>·</em> 8.6σ</span></div>",
+      "css": ":host{--g1:#021A22;--panel:#08303D;--panel-2:#0A3948;--panel-hi:#0D4556;--line:rgba(122,196,214,.16);--line-2:rgba(122,196,214,.28);--ink:#E8F0F2;--ink-2:#A3BCC6;--ink-3:#7795A2;--dark-ink:#0F1419;--saffron:#FFB547;--coral:#F2674F;--coral-ink:#FF8E7A;--emerald:#14C79A;--teal:#1FA9A0;--lilac:#B7A8FF;--sans:'Oxygen','Mukta',system-ui,sans-serif} .ds-kpi{display:flex;flex-direction:column;justify-content:center;gap:2px;width:260px;min-height:100px;padding:14px 20px;border-radius:12px;border:1px solid rgba(160,140,255,.24);background:linear-gradient(160deg,rgba(124,92,230,.22),var(--panel) 62%);box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 18px 40px -22px rgba(0,0,0,.65);font-family:var(--sans)} .ds-kl{font-size:18px;color:#D3E1E7} .ds-kv{font:700 35px/1.1 var(--sans);letter-spacing:-.01em;color:var(--lilac);font-variant-numeric:tabular-nums} .ds-kv em{font-style:normal;font-size:.6em;vertical-align:.25em;color:var(--ink-3)}"
+    },
+    {
+      "name": "Investigative-lead Notice",
+      "kind": "custom",
+      "refersTo": "notice",
+      "description": "Required coral notice beside every result.",
+      "html": "<p class=\"ds-notice\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\"/><line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\"/></svg><span>Investigative lead — not proof. Identifies a printed copy, not a person.</span></p>",
+      "css": ":host{--g1:#021A22;--panel:#08303D;--panel-2:#0A3948;--panel-hi:#0D4556;--line:rgba(122,196,214,.16);--line-2:rgba(122,196,214,.28);--ink:#E8F0F2;--ink-2:#A3BCC6;--ink-3:#7795A2;--dark-ink:#0F1419;--saffron:#FFB547;--coral:#F2674F;--coral-ink:#FF8E7A;--emerald:#14C79A;--teal:#1FA9A0;--lilac:#B7A8FF;--sans:'Oxygen','Mukta',system-ui,sans-serif} .ds-notice{margin:0;display:inline-flex;align-items:center;gap:11px;padding:8px 18px;border:1px solid rgba(242,103,79,.55);border-radius:9px;background:linear-gradient(90deg,rgba(242,103,79,.16),rgba(242,103,79,.07));color:var(--coral-ink);font:15.5px var(--sans)} .ds-notice svg{color:var(--coral);flex:none}"
+    },
+    {
+      "name": "Score Bar",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Teal-to-emerald fill (significant runs into saffron); coral threshold tick.",
+      "html": "<div class=\"ds-bars\"><span class=\"ds-bar sig\"><i style=\"width:82%\"></i><b style=\"left:44%\"></b></span><span class=\"ds-bar below\"><i style=\"width:21%\"></i><b style=\"left:44%\"></b></span></div>",
+      "css": ":host{--g1:#021A22;--panel:#08303D;--panel-2:#0A3948;--panel-hi:#0D4556;--line:rgba(122,196,214,.16);--line-2:rgba(122,196,214,.28);--ink:#E8F0F2;--ink-2:#A3BCC6;--ink-3:#7795A2;--dark-ink:#0F1419;--saffron:#FFB547;--coral:#F2674F;--coral-ink:#FF8E7A;--emerald:#14C79A;--teal:#1FA9A0;--lilac:#B7A8FF;--sans:'Oxygen','Mukta',system-ui,sans-serif} .ds-bars{display:flex;flex-direction:column;gap:14px;width:300px} .ds-bar{position:relative;display:block;height:14px;border-radius:99px;background:rgba(122,196,214,.10);overflow:hidden} .ds-bar i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#1FA9A0,#14C79A 55%,#9BDC6A 85%,#FFC24D)} .ds-bar.below i{background:linear-gradient(90deg,#1E6E7A,#2A8C93)} .ds-bar b{position:absolute;top:0;bottom:0;width:3px;margin-left:-1.5px;background:var(--coral-ink);box-shadow:0 0 0 1.5px rgba(2,22,30,.9)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Peacock Night",
+    "overview": "A serious forensic console in which every hue is a role. The ground is a deep peacock-blue to midnight-teal diagonal with three faint radial washes (teal top right, violet bottom left, ocean blue centre) fixed behind the page. Panels sit on it as solid deep slate-teal slabs with a hairline that shifts from teal to lilac around the corner. The screen reads like an instrument, not a marketing page: dense, numeric, labelled in plain language.\n\nColour is never decoration. Emerald means agreement, the saffron-to-coral sweep means a verdict or the primary action, coral means rejection and the \"not proof\" notice, lilac means statistics, and a muted neutral teal means \"below threshold\". A rejection is drawn with the same care as an accept: a slate verdict tile, a coral cross, a hatched evidence placeholder with a plain sentence.\n\nThe system refuses the near-black-plus-neon \"cyber\" console and the bland white SaaS dashboard. It is dark by commitment (`color-scheme: dark`); there is no light theme.",
+    "keyCharacteristics": [
+      "Dark peacock gradient ground, fixed; deep slate-teal panels with iridescent hairlines.",
+      "Colour carries meaning; meaning never relies on colour alone (every verdict has an icon and words).",
+      "One sans (Oxygen) for everything, tabular numerals, Mukta for Devanagari.",
+      "Hindi is first class: the same layout carries both languages.",
+      "One authored motion moment: the result arrives, and the true centre's bar climbs out of the noise."
+    ],
+    "rules": [
+      {
+        "name": "The One Meaning Rule",
+        "body": "Each signal hue has exactly one job. Saffron means verdict or action, emerald means agreement, coral means rejection or caution, lilac means statistics. If a new element needs a colour, it takes the colour of its meaning or stays neutral.",
+        "section": "colors"
+      },
+      {
+        "name": "The Never Colour Alone Rule",
+        "body": "Accept and reject always show an icon (check or cross) and words alongside the colour. Pills carry \"Significant\" or \"Below threshold\" text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Dignified Refusal Rule",
+        "body": "A non-match is \"Below threshold\" in neutral teal, never \"Not a match\" in red. A rejected verdict is a slate tile with a coral cross; it is not an error state.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Every number that can be compared (scores, p-values, counts) uses `font-variant-numeric: tabular-nums`.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "One sans for display, body and numerals. Do not introduce a display face.",
+        "section": "typography"
+      },
+      {
+        "name": "The Warm Light Rule",
+        "body": "Only saffron elements glow. Everything else is lit by tone and a soft dark shadow.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Iridescent Hairline Rule",
+        "body": "Panels and non-verdict KPI tiles carry a 1px masked gradient border (`rgba(64,224,196,.55)` → peacock → `rgba(170,140,255,.45)` at 135°): teal at the top left fading to lilac at the bottom right. This is the world's signature; the verdict tile does not get it.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do give every new element the colour of its meaning (saffron verdict/action, emerald agreement, coral rejection/caution, lilac statistics) or leave it neutral.",
+      "Do pair every accept/reject colour with an icon and words.",
+      "Do keep the \"Investigative lead, not proof\" notice in coral beside any result.",
+      "Do set comparable numbers tabular and render p-values with a real superscript exponent.",
+      "Do use one stroke icon family (Lucide, 1.5–2 stroke) at 15–26px.",
+      "Do keep motion to the result-arrival moment and honour `prefers-reduced-motion` (all animation and transitions off).",
+      "Do test both EN and हिन्दी at every breakpoint; Mukta carries Devanagari."
+    ],
+    "donts": [
+      "Don't use red or \"Not a match\" wording for below-threshold rows; they are neutral teal \"Below threshold\".",
+      "Don't give a glow to anything that is not saffron.",
+      "Don't add a light theme, a near-black neon \"cyber\" palette, or a white SaaS dashboard look.",
+      "Don't introduce a second display face.",
+      "Don't imply a real government body (no emblems, ministry names).",
+      "Don't use saffron for a non-significant result."
+    ]
+  }
+}
