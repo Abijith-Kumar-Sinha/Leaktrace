@@ -5,7 +5,7 @@ Investigation Dashboard   POST /api/decode    (photo + case id + key)         ->
 The secret key is used in memory only; it is never written to disk or logged.
 """
 from __future__ import annotations
-import os, io, json, uuid, zipfile, threading, hashlib, base64, time, re
+import os, io, json, uuid, zipfile, threading, hashlib, hmac, secrets, base64, time, re
 import numpy as np, cv2
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.responses import FileResponse, JSONResponse
@@ -17,10 +17,13 @@ from decode.overlay import draw_overlay, NOTICE
 from decode.score import p_values
 
 app = FastAPI(title="LeakTrace", description="Exam-paper leak attribution. " + NOTICE)
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+# Public deployments set LEAKTRACE_ORIGINS to the web app origin(s); local dev keeps "*".
+ORIGINS = [o.strip() for o in os.environ.get("LEAKTRACE_ORIGINS", "*").split(",") if o.strip()]
+app.add_middleware(CORSMiddleware, allow_origins=ORIGINS, allow_methods=["GET", "POST"], allow_headers=["*"])
 DATA = os.environ.get("LEAKTRACE_DATA", "outputs/cases")
 os.makedirs(DATA, exist_ok=True)
 JOBS: dict[str, dict] = {}
+TOKENS: dict[str, str] = {}   # case id -> sha256(download token), memory only
 _DEC: dict[str, Decoder] = {}
 _LOCK = threading.Lock()
 DISCLAIMER = ("LeakTrace is an INVESTIGATIVE-LEAD tool. A match shows which centre's printed copy the photographed paper most "
@@ -71,9 +74,11 @@ async def prepare(paper: UploadFile = File(...), centres: UploadFile = File(...)
     if not (0.02 <= delta <= 1.5 and 0.02 <= eps <= 1.5): raise HTTPException(400, "delta/epsilon must be between 0.02 and 1.5 pt")
     pap = paper_from_upload(paper.filename, await paper.read(), lang); ids = parse_centres(await centres.read())
     job_id = uuid.uuid4().hex[:10]; case_dir = f"{DATA}/{job_id}"; os.makedirs(case_dir)
+    token = secrets.token_urlsafe(24)   # shown once; the ZIP (master + every copy) is only served against it
     JOBS[job_id] = dict(state="running", done=0, total=len(ids))
+    TOKENS[job_id] = hashlib.sha256(token.encode()).hexdigest()
     threading.Thread(target=_prepare_worker, args=(job_id, pap, ids, key, delta, eps, case_dir), daemon=True).start()
-    return dict(case_id=job_id, centres=len(ids))
+    return dict(case_id=job_id, centres=len(ids), token=token)
 
 @app.get("/api/prepare/{job_id}")
 def prepare_status(job_id: str):
@@ -81,7 +86,9 @@ def prepare_status(job_id: str):
     return JOBS[job_id]
 
 @app.get("/api/prepare/{job_id}/zip")
-def prepare_zip(job_id: str):
+def prepare_zip(job_id: str, token: str = ""):
+    want = TOKENS.get(job_id)
+    if not want or not hmac.compare_digest(want, hashlib.sha256(token.encode()).hexdigest()): raise HTTPException(403, "download token required")
     p = f"{DATA}/{job_id}/copies.zip"
     if not os.path.exists(p) or JOBS.get(job_id, {}).get("state") != "done": raise HTTPException(404, "not ready")
     return FileResponse(p, media_type="application/zip", filename=f"leaktrace_{job_id}.zip")

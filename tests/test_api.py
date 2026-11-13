@@ -12,13 +12,15 @@ def test_prepare_then_investigate():
     centres = "\n".join(["centre_id"] + [f"K{i:03d}" for i in range(6)])
     r = c.post("/api/prepare", files={"paper": ("p.json", json.dumps(paper)), "centres": ("c.csv", centres)}, data={"key": "api-test-secret-key", "lang": "en"})
     assert r.status_code == 200, r.text
-    cid = r.json()["case_id"]
+    cid, tok = r.json()["case_id"], r.json()["token"]
     for _ in range(120):
         s = c.get(f"/api/prepare/{cid}").json()
         if s["state"] != "running": break
         time.sleep(1)
     assert s["state"] == "done", s
-    z = zipfile.ZipFile(io.BytesIO(c.get(f"/api/prepare/{cid}/zip").content))
+    assert c.get(f"/api/prepare/{cid}/zip").status_code == 403          # no token, no master/copies
+    assert c.get(f"/api/prepare/{cid}/zip?token=wrong").status_code == 403
+    z = zipfile.ZipFile(io.BytesIO(c.get(f"/api/prepare/{cid}/zip?token={tok}").content))
     names = z.namelist(); assert sum(n.startswith("copies/") for n in names) == 6
     page = rasterise(z.read("copies/K004.pdf"))[0]
     img, _ = photograph(page, Degrade(out_width=1600, persp=0.3, blur=1.0, noise=3, jpeg=85, whatsapp=True, seed=5), [595.28, 841.89])

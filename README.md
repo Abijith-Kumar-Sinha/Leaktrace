@@ -9,6 +9,14 @@ and reports which centre's copy it most probably came from, **with a significanc
 
 SDG 4 (Quality Education). English and Hindi (Devanagari). Mock papers only (`data/mock_papers/`, written by us).
 
+## Live demo
+- **Web app:** https://abijith-kumar-sinha.github.io/Leaktrace/ (add `?lang=hi` after the route for the Hindi UI, e.g. `#/investigate?lang=hi`).
+- **Decoder API:** a Hugging Face Docker Space built from `deploy/hf-space/`. The Space clones this repo, so it only needs the
+  `Dockerfile` and `README.md` from that folder. The free Space sleeps when idle, so the first request after a pause can take up to a minute.
+- **Try it:** Prepare paper → download the sample paper and the 200-centre list from the links on that page → enter a key of
+  12 or more characters → download the ZIP → print or screenshot one centre's PDF → photograph it → Investigate.
+- The GitHub Pages build reads the API URL from the repository variable `LEAKTRACE_API`.
+
 ## How it works (one paragraph)
 `embed/` typesets the master with WeasyPrint/HarfBuzz, one CSS span per word. A centre's copy is the *same* HTML with
 `position:relative` offsets: gaps are grouped in pairs `(+s,-s)` (one word moves by ±δ, line width and justified margins

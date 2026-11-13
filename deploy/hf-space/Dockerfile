@@ -17,6 +17,6 @@ ARG REPO=https://github.com/Abijith-Kumar-Sinha/Leaktrace.git
 ARG REF=main
 RUN git clone --depth 1 --branch $REF $REPO . && pip install --no-cache-dir --user -r requirements.txt
 
-ENV PYTHONPATH=/home/user/app LEAKTRACE_DATA=/tmp/leaktrace
+ENV PYTHONPATH=/home/user/app LEAKTRACE_DATA=/tmp/leaktrace LEAKTRACE_ORIGINS=https://abijith-kumar-sinha.github.io
 EXPOSE 7860
 CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "7860"]

@@ -233,14 +233,14 @@ function Investigate({ t, query, addAudit, cases, refreshCases }) {
 function Prepare({ t, addAudit, refreshCases }) {
   const [paper, setPaper] = useState(null), [centres, setCentres] = useState(null), [key, setKey] = useState('')
   const [lang, setLang] = useState('en'), [delta, setDelta] = useState(0.30), [eps, setEps] = useState(0.30)
-  const [job, setJob] = useState(null), [st, setSt] = useState(null), [err, setErr] = useState('')
+  const [job, setJob] = useState(null), [tok, setTok] = useState(''), [st, setSt] = useState(null), [err, setErr] = useState('')
   const timer = useRef(null)
   useEffect(() => () => clearInterval(timer.current), [])
   async function start(e) {
     e.preventDefault(); setErr(''); setSt(null)
     const fd = new FormData(); fd.append('paper', paper); fd.append('centres', centres); fd.append('key', key); fd.append('lang', lang); fd.append('delta', delta); fd.append('eps', eps)
     try {
-      const j = await api('/api/prepare', { method: 'POST', body: fd }); setJob(j.case_id)
+      const j = await api('/api/prepare', { method: 'POST', body: fd }); setJob(j.case_id); setTok(j.token || '')
       timer.current = setInterval(async () => {
         try { const s = await api('/api/prepare/' + j.case_id); setSt(s)
           if (s.state !== 'running') { clearInterval(timer.current); if (s.state === 'done') { addAudit({ type: 'prepare', case: j.case_id, n: s.total }); refreshCases() } } }
@@ -272,7 +272,7 @@ function Prepare({ t, addAudit, refreshCases }) {
         <div className="jh"><strong>{t.caseId} {job}</strong><span>{t.keepId}</span></div>
         <span className="bar big"><i style={{ width: pct + '%' }} /></span>
         <span className="jc">{st ? t.copies(st.done, st.total) : t.starting}</span>
-        {st?.state === 'done' && <a className="btn primary" href={`${API}/api/prepare/${job}/zip`}><Download size={18} />{t.download}</a>}
+        {st?.state === 'done' && <a className="btn primary" href={`${API}/api/prepare/${job}/zip?token=${encodeURIComponent(tok)}`}><Download size={18} />{t.download}</a>}
         {st?.state === 'error' && <p className="err"><CircleAlert size={18} />{st.error}</p>}
       </div>}
     </form>
