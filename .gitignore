@@ -7,3 +7,8 @@ web/dist/
 outputs/test_cases/
 outputs/test_cases/
 outputs/cases/
+
+# local tooling
+.claude/
+.impeccable/review/
+.impeccable/build/font-match/

@@ -1,0 +1,1282 @@
+{
+  "tool": "comp-spec",
+  "version": 1,
+  "createdAt": "2026-11-13T13:09:29.694Z",
+  "comp": ".impeccable/mocks/comp-4-peacock.png",
+  "warnings": [
+    "region evidence-photo: \"codeDrawn\": true set in the regions file (the painted-material refusal is overridden: code draws this region)",
+    "region dist-chart: \"codeDrawn\": true set in the regions file (the painted-material refusal is overridden: code draws this region)"
+  ],
+  "uncoveredInkCells": [],
+  "compSize": {
+    "width": 1536,
+    "height": 864
+  },
+  "aspect": 1.7778,
+  "orientation": "landscape",
+  "palette": [
+    {
+      "hex": "#082a3a",
+      "coverage": 0.7659
+    },
+    {
+      "hex": "#083739",
+      "coverage": 0.122
+    },
+    {
+      "hex": "#b7b1b8",
+      "coverage": 0.08
+    },
+    {
+      "hex": "#0b0b0a",
+      "coverage": 0.0179
+    },
+    {
+      "hex": "#45321f",
+      "coverage": 0.0142
+    }
+  ],
+  "bands": [
+    {
+      "y": 0.0278,
+      "strength": 0.2293
+    },
+    {
+      "y": 0.125,
+      "strength": 0.4799
+    },
+    {
+      "y": 0.1528,
+      "strength": 0.4918
+    },
+    {
+      "y": 0.1944,
+      "strength": 0.2712
+    },
+    {
+      "y": 0.2639,
+      "strength": 0.289
+    },
+    {
+      "y": 0.3472,
+      "strength": 0.3116
+    },
+    {
+      "y": 0.5972,
+      "strength": 0.2195
+    },
+    {
+      "y": 0.6528,
+      "strength": 0.4471
+    },
+    {
+      "y": 0.8333,
+      "strength": 0.3506
+    }
+  ],
+  "regions": [
+    {
+      "id": "brand",
+      "kind": "text",
+      "note": "LeakTrace wordmark beside a small peacock-feather monogram icon",
+      "grid": "A0:B0",
+      "coverBox": {
+        "x": 0,
+        "y": 0,
+        "w": 0.2,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.0117,
+        "y": 0.0069,
+        "w": 0.1289,
+        "h": 0.0764
+      },
+      "px": {
+        "x": 18,
+        "y": 6,
+        "w": 198,
+        "h": 66
+      },
+      "aspect": 3,
+      "palette": [
+        {
+          "hex": "#081e2f",
+          "coverage": 0.612
+        },
+        {
+          "hex": "#082828",
+          "coverage": 0.2654
+        },
+        {
+          "hex": "#f1f7f7",
+          "coverage": 0.0484
+        },
+        {
+          "hex": "#305d6d",
+          "coverage": 0.0429
+        },
+        {
+          "hex": "#138276",
+          "coverage": 0.0312
+        }
+      ],
+      "detail": {
+        "energy": 32.5636
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "breadcrumb",
+      "kind": "text",
+      "note": "breadcrumb Investigate / LT-7F3A",
+      "grid": "C0:D0",
+      "coverBox": {
+        "x": 0.2,
+        "y": 0,
+        "w": 0.2,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.1999,
+        "y": 0.0208,
+        "w": 0.1016,
+        "h": 0.0347
+      },
+      "px": {
+        "x": 307,
+        "y": 18,
+        "w": 156,
+        "h": 30
+      },
+      "aspect": 5.2,
+      "palette": [
+        {
+          "hex": "#082737",
+          "coverage": 0.8594
+        },
+        {
+          "hex": "#275161",
+          "coverage": 0.0422
+        },
+        {
+          "hex": "#588d9e",
+          "coverage": 0.0422
+        },
+        {
+          "hex": "#78b7cc",
+          "coverage": 0.0301
+        },
+        {
+          "hex": "#f1f8f8",
+          "coverage": 0.0261
+        }
+      ],
+      "detail": {
+        "energy": 31.27
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "search",
+      "kind": "control",
+      "note": "search field: Search cases, centres",
+      "grid": "G0:I0",
+      "coverBox": {
+        "x": 0.6,
+        "y": 0,
+        "w": 0.3,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.6276,
+        "y": 0.0139,
+        "w": 0.1211,
+        "h": 0.0417
+      },
+      "px": {
+        "x": 964,
+        "y": 12,
+        "w": 186,
+        "h": 36
+      },
+      "aspect": 5.1667,
+      "palette": [
+        {
+          "hex": "#0a3b4b",
+          "coverage": 0.8571
+        },
+        {
+          "hex": "#5b8799",
+          "coverage": 0.0728
+        },
+        {
+          "hex": "#8bb3c4",
+          "coverage": 0.0458
+        },
+        {
+          "hex": "#082644",
+          "coverage": 0.0202
+        },
+        {
+          "hex": "#4d8888",
+          "coverage": 0.004
+        }
+      ],
+      "detail": {
+        "energy": 21.18
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "lang",
+      "kind": "control",
+      "note": "EN | hindi language toggle and user avatar icon",
+      "grid": "J0:J0",
+      "coverBox": {
+        "x": 0.9,
+        "y": 0,
+        "w": 0.1,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.9583,
+        "y": 0.0069,
+        "w": 0.0313,
+        "h": 0.0556
+      },
+      "px": {
+        "x": 1472,
+        "y": 6,
+        "w": 48,
+        "h": 48
+      },
+      "aspect": 1,
+      "palette": [
+        {
+          "hex": "#093848",
+          "coverage": 0.8047
+        },
+        {
+          "hex": "#396f83",
+          "coverage": 0.0938
+        },
+        {
+          "hex": "#87b5cd",
+          "coverage": 0.0742
+        },
+        {
+          "hex": "#0a2a4a",
+          "coverage": 0.0273
+        }
+      ],
+      "detail": {
+        "energy": 5.1043
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "nav-ops",
+      "kind": "control",
+      "note": "Operations label and nav items Prepare paper, Investigate (selected row with saffron bar), Cases",
+      "grid": "A1:B3",
+      "coverBox": {
+        "x": 0,
+        "y": 0.1,
+        "w": 0.2,
+        "h": 0.3
+      },
+      "box": {
+        "x": 0.0039,
+        "y": 0.1551,
+        "w": 0.1133,
+        "h": 0.1597
+      },
+      "px": {
+        "x": 6,
+        "y": 134,
+        "w": 174,
+        "h": 138
+      },
+      "aspect": 1.2609,
+      "palette": [
+        {
+          "hex": "#082d3c",
+          "coverage": 0.9247
+        },
+        {
+          "hex": "#9ebfce",
+          "coverage": 0.0277
+        },
+        {
+          "hex": "#e2eef3",
+          "coverage": 0.0207
+        },
+        {
+          "hex": "#4c7283",
+          "coverage": 0.016
+        },
+        {
+          "hex": "#f6b154",
+          "coverage": 0.0109
+        }
+      ],
+      "detail": {
+        "energy": 18.1865
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "nav-gov",
+      "kind": "control",
+      "note": "Governance label and nav items Key custody, Audit log",
+      "grid": "A3:B4",
+      "coverBox": {
+        "x": 0,
+        "y": 0.3,
+        "w": 0.2,
+        "h": 0.2
+      },
+      "box": {
+        "x": 0.0156,
+        "y": 0.4525,
+        "w": 0.0781,
+        "h": 0.0475
+      },
+      "px": {
+        "x": 24,
+        "y": 391,
+        "w": 120,
+        "h": 41
+      },
+      "aspect": 2.9268,
+      "palette": [
+        {
+          "hex": "#082737",
+          "coverage": 0.8427
+        },
+        {
+          "hex": "#729ab1",
+          "coverage": 0.0832
+        },
+        {
+          "hex": "#c5e2eb",
+          "coverage": 0.0434
+        },
+        {
+          "hex": "#456b7b",
+          "coverage": 0.0181
+        },
+        {
+          "hex": "#1a434f",
+          "coverage": 0.0127
+        }
+      ],
+      "detail": {
+        "energy": 17.2758
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "nav-foot",
+      "kind": "text",
+      "note": "LeakTrace v1.4.2 and For a fairer tomorrow",
+      "grid": "A9:B9",
+      "coverBox": {
+        "x": 0,
+        "y": 0.9,
+        "w": 0.2,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.0078,
+        "y": 0.9213,
+        "w": 0.0977,
+        "h": 0.0625
+      },
+      "px": {
+        "x": 12,
+        "y": 796,
+        "w": 150,
+        "h": 54
+      },
+      "aspect": 2.7778,
+      "palette": [
+        {
+          "hex": "#082838",
+          "coverage": 0.8856
+        },
+        {
+          "hex": "#2b586a",
+          "coverage": 0.0744
+        },
+        {
+          "hex": "#538395",
+          "coverage": 0.0333
+        },
+        {
+          "hex": "#081838",
+          "coverage": 0.0044
+        },
+        {
+          "hex": "#083838",
+          "coverage": 0.0022
+        }
+      ],
+      "detail": {
+        "energy": 14.1649
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "title",
+      "kind": "text",
+      "note": "page title Investigation Â· LT-7F3A",
+      "grid": null,
+      "box": {
+        "x": 0.18,
+        "y": 0.092,
+        "w": 0.21,
+        "h": 0.05
+      },
+      "px": {
+        "x": 276,
+        "y": 79,
+        "w": 323,
+        "h": 43
+      },
+      "aspect": 7.5116,
+      "palette": [
+        {
+          "hex": "#082736",
+          "coverage": 0.7712
+        },
+        {
+          "hex": "#e7f4f6",
+          "coverage": 0.1106
+        },
+        {
+          "hex": "#7394a1",
+          "coverage": 0.0444
+        },
+        {
+          "hex": "#aec7d1",
+          "coverage": 0.0419
+        },
+        {
+          "hex": "#305566",
+          "coverage": 0.0319
+        }
+      ],
+      "detail": {
+        "energy": 64.716
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "chips",
+      "kind": "control",
+      "note": "chips 200 centres and English",
+      "grid": "E1:F1",
+      "coverBox": {
+        "x": 0.4,
+        "y": 0.1,
+        "w": 0.2,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.4115,
+        "y": 0.169,
+        "w": 0.1328,
+        "h": 0.0301
+      },
+      "px": {
+        "x": 632,
+        "y": 146,
+        "w": 204,
+        "h": 26
+      },
+      "aspect": 7.8462,
+      "palette": [
+        {
+          "hex": "#082a3b",
+          "coverage": 0.7208
+        },
+        {
+          "hex": "#d6eff6",
+          "coverage": 0.0863
+        },
+        {
+          "hex": "#a4c4d5",
+          "coverage": 0.0795
+        },
+        {
+          "hex": "#325e6e",
+          "coverage": 0.066
+        },
+        {
+          "hex": "#083535",
+          "coverage": 0.0474
+        }
+      ],
+      "detail": {
+        "energy": 56.9781
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "notice",
+      "kind": "chrome",
+      "note": "coral bordered notice: Investigative lead, not proof. Identifies a printed copy, not a person.",
+      "grid": "G1:J1",
+      "box": {
+        "x": 0.6,
+        "y": 0.1,
+        "w": 0.4,
+        "h": 0.1
+      },
+      "px": {
+        "x": 922,
+        "y": 86,
+        "w": 614,
+        "h": 86
+      },
+      "aspect": 7.1395,
+      "palette": [
+        {
+          "hex": "#082734",
+          "coverage": 0.8884
+        },
+        {
+          "hex": "#3e2c37",
+          "coverage": 0.044
+        },
+        {
+          "hex": "#084250",
+          "coverage": 0.0338
+        },
+        {
+          "hex": "#e56f5a",
+          "coverage": 0.0232
+        },
+        {
+          "hex": "#aa4f4a",
+          "coverage": 0.0106
+        }
+      ],
+      "detail": {
+        "energy": 17.6447
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "kpi-verdict",
+      "kind": "chrome",
+      "note": "saffron to coral gradient verdict tile with dark check icon: Fingerprint found, Statistically significant match",
+      "grid": "C1:D2",
+      "box": {
+        "x": 0.2,
+        "y": 0.1,
+        "w": 0.2,
+        "h": 0.2
+      },
+      "px": {
+        "x": 307,
+        "y": 86,
+        "w": 307,
+        "h": 173
+      },
+      "aspect": 1.7746,
+      "palette": [
+        {
+          "hex": "#082735",
+          "coverage": 0.4548
+        },
+        {
+          "hex": "#f88948",
+          "coverage": 0.2127
+        },
+        {
+          "hex": "#f0aa48",
+          "coverage": 0.1748
+        },
+        {
+          "hex": "#f76e57",
+          "coverage": 0.119
+        },
+        {
+          "hex": "#eaf3f7",
+          "coverage": 0.0387
+        }
+      ],
+      "detail": {
+        "energy": 32.4358
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "kpi-source",
+      "kind": "text",
+      "note": "tile Most probable source C0012",
+      "grid": "E1:F2",
+      "coverBox": {
+        "x": 0.4,
+        "y": 0.1,
+        "w": 0.2,
+        "h": 0.2
+      },
+      "box": {
+        "x": 0.4115,
+        "y": 0.169,
+        "w": 0.1328,
+        "h": 0.0903
+      },
+      "px": {
+        "x": 632,
+        "y": 146,
+        "w": 204,
+        "h": 78
+      },
+      "aspect": 2.6154,
+      "palette": [
+        {
+          "hex": "#08293a",
+          "coverage": 0.8156
+        },
+        {
+          "hex": "#a8f3f4",
+          "coverage": 0.0595
+        },
+        {
+          "hex": "#083636",
+          "coverage": 0.0589
+        },
+        {
+          "hex": "#235766",
+          "coverage": 0.0354
+        },
+        {
+          "hex": "#d6eff7",
+          "coverage": 0.0306
+        }
+      ],
+      "detail": {
+        "energy": 31.1761
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "kpi-p",
+      "kind": "text",
+      "note": "tile p-value 2 x 10^-17",
+      "grid": "G1:H2",
+      "coverBox": {
+        "x": 0.6,
+        "y": 0.1,
+        "w": 0.2,
+        "h": 0.2
+      },
+      "box": {
+        "x": 0.612,
+        "y": 0.169,
+        "w": 0.0977,
+        "h": 0.0833
+      },
+      "px": {
+        "x": 940,
+        "y": 146,
+        "w": 150,
+        "h": 72
+      },
+      "aspect": 2.0833,
+      "palette": [
+        {
+          "hex": "#082a3a",
+          "coverage": 0.8035
+        },
+        {
+          "hex": "#c3f0f7",
+          "coverage": 0.0826
+        },
+        {
+          "hex": "#083636",
+          "coverage": 0.0658
+        },
+        {
+          "hex": "#6999a8",
+          "coverage": 0.0245
+        },
+        {
+          "hex": "#99cad6",
+          "coverage": 0.0236
+        }
+      ],
+      "detail": {
+        "energy": 20.1066
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "kpi-z",
+      "kind": "text",
+      "note": "tile z Â· margin 9.0 Â· 8.6 sigma in lilac",
+      "grid": "I1:J2",
+      "coverBox": {
+        "x": 0.8,
+        "y": 0.1,
+        "w": 0.2,
+        "h": 0.2
+      },
+      "box": {
+        "x": 0.8079,
+        "y": 0.169,
+        "w": 0.1211,
+        "h": 0.0903
+      },
+      "px": {
+        "x": 1241,
+        "y": 146,
+        "w": 186,
+        "h": 78
+      },
+      "aspect": 2.3846,
+      "palette": [
+        {
+          "hex": "#08293a",
+          "coverage": 0.8491
+        },
+        {
+          "hex": "#b1a9f5",
+          "coverage": 0.0803
+        },
+        {
+          "hex": "#083838",
+          "coverage": 0.0427
+        },
+        {
+          "hex": "#467081",
+          "coverage": 0.0142
+        },
+        {
+          "hex": "#2a4c75",
+          "coverage": 0.0136
+        }
+      ],
+      "detail": {
+        "energy": 19.1517
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "evidence-title",
+      "kind": "text",
+      "note": "panel heading Evidence",
+      "grid": null,
+      "box": {
+        "x": 0.19,
+        "y": 0.305,
+        "w": 0.065,
+        "h": 0.035
+      },
+      "px": {
+        "x": 292,
+        "y": 264,
+        "w": 100,
+        "h": 30
+      },
+      "aspect": 3.3333,
+      "palette": [
+        {
+          "hex": "#092f3c",
+          "coverage": 0.8048
+        },
+        {
+          "hex": "#eff7f7",
+          "coverage": 0.0961
+        },
+        {
+          "hex": "#9dbcc3",
+          "coverage": 0.0511
+        },
+        {
+          "hex": "#2c5a66",
+          "coverage": 0.027
+        },
+        {
+          "hex": "#668896",
+          "coverage": 0.021
+        }
+      ],
+      "detail": {
+        "energy": 26.88
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 8,
+          "capHeightPx": 14.5,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.6547,
+          "advTall": 0.6547,
+          "advX": 0.6547,
+          "gap": 0.0689,
+          "xRatio": 0.7437,
+          "stemW": 0.212,
+          "contrast": 1.2149,
+          "serif": null,
+          "densTall": 0.6359,
+          "densX": 0.6574,
+          "weight": 0.6359
+        },
+        "widthClass": "normal",
+        "weightClass": "bold"
+      }
+    },
+    {
+      "id": "evidence-photo",
+      "kind": "chrome",
+      "note": "runtime image slot: the decoder API returns the overlay of the investigator uploaded photo; shown with object-fit cover and rounded corners",
+      "grid": "C3:F6",
+      "codeDrawn": true,
+      "box": {
+        "x": 0.2,
+        "y": 0.3,
+        "w": 0.4,
+        "h": 0.4
+      },
+      "px": {
+        "x": 307,
+        "y": 259,
+        "w": 614,
+        "h": 346
+      },
+      "aspect": 1.7746,
+      "palette": [
+        {
+          "hex": "#b7b1b9",
+          "coverage": 0.4927
+        },
+        {
+          "hex": "#092a3a",
+          "coverage": 0.2236
+        },
+        {
+          "hex": "#0c0b0b",
+          "coverage": 0.1087
+        },
+        {
+          "hex": "#093838",
+          "coverage": 0.1059
+        },
+        {
+          "hex": "#493522",
+          "coverage": 0.0692
+        }
+      ],
+      "detail": {
+        "energy": 23.994
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "evidence-caption",
+      "kind": "text",
+      "note": "caption 77/77 shifted words agree Â· 302 gaps Â· 28 lines",
+      "grid": null,
+      "box": {
+        "x": 0.19,
+        "y": 0.663,
+        "w": 0.25,
+        "h": 0.03
+      },
+      "px": {
+        "x": 292,
+        "y": 573,
+        "w": 384,
+        "h": 26
+      },
+      "aspect": 14.7692,
+      "palette": [
+        {
+          "hex": "#083540",
+          "coverage": 0.8238
+        },
+        {
+          "hex": "#cbe5ec",
+          "coverage": 0.0845
+        },
+        {
+          "hex": "#5b8193",
+          "coverage": 0.0374
+        },
+        {
+          "hex": "#0a2742",
+          "coverage": 0.0285
+        },
+        {
+          "hex": "#2f576c",
+          "coverage": 0.0258
+        }
+      ],
+      "detail": {
+        "energy": 57.0397
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null,
+      "type": {
+        "comp": {
+          "lines": 1,
+          "glyphs": 37,
+          "capHeightPx": 11.7,
+          "inkIsDark": false,
+          "allCaps": false,
+          "advance": 0.6256,
+          "advTall": 0.6256,
+          "advX": 0.6256,
+          "gap": 0.1137,
+          "xRatio": 0.7308,
+          "stemW": 0.1743,
+          "contrast": 1.1637,
+          "serif": 0.3344,
+          "densTall": 0.4841,
+          "densX": 0.5925,
+          "weight": 0.4841
+        },
+        "widthClass": "normal",
+        "weightClass": "medium"
+      }
+    },
+    {
+      "id": "dist-title",
+      "kind": "text",
+      "note": "panel heading Score distribution",
+      "grid": "G3:H3",
+      "coverBox": {
+        "x": 0.6,
+        "y": 0.3,
+        "w": 0.2,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.6003,
+        "y": 0.2998,
+        "w": 0.0977,
+        "h": 0.0347
+      },
+      "px": {
+        "x": 922,
+        "y": 259,
+        "w": 150,
+        "h": 30
+      },
+      "aspect": 5,
+      "palette": [
+        {
+          "hex": "#082939",
+          "coverage": 0.7226
+        },
+        {
+          "hex": "#f1f6f6",
+          "coverage": 0.1011
+        },
+        {
+          "hex": "#093535",
+          "coverage": 0.0688
+        },
+        {
+          "hex": "#295363",
+          "coverage": 0.0581
+        },
+        {
+          "hex": "#83a2ae",
+          "coverage": 0.0495
+        }
+      ],
+      "detail": {
+        "energy": 44.5786
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "dist-sub",
+      "kind": "text",
+      "note": "4000 wrong keys",
+      "grid": "I3:J3",
+      "coverBox": {
+        "x": 0.8,
+        "y": 0.3,
+        "w": 0.2,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.8939,
+        "y": 0.3067,
+        "w": 0.0859,
+        "h": 0.0347
+      },
+      "px": {
+        "x": 1373,
+        "y": 265,
+        "w": 132,
+        "h": 30
+      },
+      "aspect": 4.4,
+      "palette": [
+        {
+          "hex": "#08293a",
+          "coverage": 0.7591
+        },
+        {
+          "hex": "#083838",
+          "coverage": 0.1136
+        },
+        {
+          "hex": "#568698",
+          "coverage": 0.0614
+        },
+        {
+          "hex": "#265567",
+          "coverage": 0.0591
+        },
+        {
+          "hex": "#081838",
+          "coverage": 0.0068
+        }
+      ],
+      "detail": {
+        "energy": 14.176
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "dist-chart",
+      "kind": "chrome",
+      "note": "histogram chart drawn from data at runtime: lilac bins, coral dashed threshold z = 4.4, emerald to saffron bar labelled C0012, axes",
+      "grid": "G3:J6",
+      "codeDrawn": true,
+      "box": {
+        "x": 0.6,
+        "y": 0.3,
+        "w": 0.4,
+        "h": 0.4
+      },
+      "px": {
+        "x": 922,
+        "y": 259,
+        "w": 614,
+        "h": 346
+      },
+      "aspect": 1.7746,
+      "palette": [
+        {
+          "hex": "#082838",
+          "coverage": 0.6169
+        },
+        {
+          "hex": "#083838",
+          "coverage": 0.3061
+        },
+        {
+          "hex": "#8086d8",
+          "coverage": 0.0618
+        },
+        {
+          "hex": "#265c69",
+          "coverage": 0.0082
+        },
+        {
+          "hex": "#14254c",
+          "coverage": 0.0071
+        }
+      ],
+      "detail": {
+        "energy": 10.9209
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "table-title",
+      "kind": "text",
+      "note": "panel heading Ranked centres",
+      "grid": null,
+      "box": {
+        "x": 0.19,
+        "y": 0.735,
+        "w": 0.1,
+        "h": 0.035
+      },
+      "px": {
+        "x": 292,
+        "y": 635,
+        "w": 154,
+        "h": 30
+      },
+      "aspect": 5.1333,
+      "palette": [
+        {
+          "hex": "#08293a",
+          "coverage": 0.7053
+        },
+        {
+          "hex": "#eef5f6",
+          "coverage": 0.1179
+        },
+        {
+          "hex": "#0a393b",
+          "coverage": 0.0963
+        },
+        {
+          "hex": "#698b99",
+          "coverage": 0.0432
+        },
+        {
+          "hex": "#b0c5d3",
+          "coverage": 0.0373
+        }
+      ],
+      "detail": {
+        "energy": 41.6318
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "table-sub",
+      "kind": "text",
+      "note": "Showing top 5 of 200 centres",
+      "grid": "I7:J7",
+      "coverBox": {
+        "x": 0.8,
+        "y": 0.7,
+        "w": 0.2,
+        "h": 0.1
+      },
+      "box": {
+        "x": 0.8509,
+        "y": 0.735,
+        "w": 0.1289,
+        "h": 0.0347
+      },
+      "px": {
+        "x": 1307,
+        "y": 635,
+        "w": 198,
+        "h": 30
+      },
+      "aspect": 6.6,
+      "palette": [
+        {
+          "hex": "#082939",
+          "coverage": 0.8727
+        },
+        {
+          "hex": "#548798",
+          "coverage": 0.0515
+        },
+        {
+          "hex": "#2b5c6f",
+          "coverage": 0.0439
+        },
+        {
+          "hex": "#083636",
+          "coverage": 0.0318
+        }
+      ],
+      "detail": {
+        "energy": 17.7006
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    },
+    {
+      "id": "table",
+      "kind": "chrome",
+      "note": "ranked centres table: header row, five rows with teal to emerald score bars, p-values, status pills Significant and Below threshold",
+      "grid": "C8:J9",
+      "box": {
+        "x": 0.2,
+        "y": 0.8,
+        "w": 0.8,
+        "h": 0.2
+      },
+      "px": {
+        "x": 307,
+        "y": 691,
+        "w": 1229,
+        "h": 173
+      },
+      "aspect": 7.104,
+      "palette": [
+        {
+          "hex": "#082d3c",
+          "coverage": 0.9451
+        },
+        {
+          "hex": "#24c196",
+          "coverage": 0.0319
+        },
+        {
+          "hex": "#1d535b",
+          "coverage": 0.0083
+        },
+        {
+          "hex": "#a2c4d4",
+          "coverage": 0.0075
+        },
+        {
+          "hex": "#5f8697",
+          "coverage": 0.0072
+        }
+      ],
+      "detail": {
+        "energy": 19.6526
+      },
+      "medium": "semantic",
+      "plate": null,
+      "text": null
+    }
+  ]
+}

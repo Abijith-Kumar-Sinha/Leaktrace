@@ -39,6 +39,7 @@ def draw_overlay(img, dbg, bank, centre_index, delta, eps, max_side=1800):
             col = (60, 170, 60) if agree else (50, 50, 210)
             n_ok += int(agree); n_bad += int(not agree)
         cv2.polylines(out, [ph.reshape(-1, 1, 2)], True, col, 2, cv2.LINE_AA)
+    dbg["agree"], dbg["disagree"] = n_ok, n_bad   # surfaced by the API next to the overlay
     h, w = out.shape[:2]
     f = min(1.0, max_side / max(h, w))
     if f < 1: out = cv2.resize(out, None, fx=f, fy=f, interpolation=cv2.INTER_AREA)

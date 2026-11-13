@@ -14,6 +14,7 @@ from common.keys import SignBank, word_offsets
 from embed.typeset import render, rasterise
 from decode.pipeline import Decoder
 from decode.overlay import draw_overlay, NOTICE
+from decode.score import p_values
 
 app = FastAPI(title="LeakTrace", description="Exam-paper leak attribution. " + NOTICE)
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
@@ -118,6 +119,17 @@ async def decode(photo: UploadFile = File(...), case_id: str = Form(...), key: s
         overlay = "data:image/jpeg;base64," + base64.b64encode(cv2.imencode(".jpg", ov, [cv2.IMWRITE_JPEG_QUALITY, 85])[1]).decode()
     clean = {k: (v if not isinstance(v, (np.floating, np.integer)) else v.item()) for k, v in r.items() if k not in ("H",)}
     clean.pop("best", None); clean.pop("second", None); clean.pop("candidates", None)
+    if dbg is not None:   # evidence for the dashboard: wrong-key null histogram + per-candidate z / Bonferroni p
+        T, T0 = dbg["T"], dbg["T0"]
+        p, z, _ = p_values(T, T0)
+        mu, sd = float(T0.mean()), float(T0.std() + 1e-12)
+        counts, edges = np.histogram((T0 - mu) / sd, bins=40, range=(-5, 5))
+        top = np.argsort(-T)[:5]
+        clean["null_hist"] = dict(counts=counts.tolist(), edges=edges.tolist(), n=int(len(T0)))
+        clean["ranking_stats"] = [dict(centre=dec.bank.centre_ids[i], score=float(T[i]), z=float(z[i]),
+                                       p=float(min(1.0, len(T) * p[i]))) for i in top]
+        clean["n_centres"] = int(len(T))
+        clean["agree"], clean["disagree"] = int(dbg.get("agree", 0)), int(dbg.get("disagree", 0))
     return JSONResponse(dict(result=clean, overlay=overlay, notice=NOTICE, disclaimer=DISCLAIMER))
 
 @app.get("/api/health")

@@ -1,0 +1,164 @@
+{
+ "regions": [
+  {
+   "id": "brand",
+   "kind": "text",
+   "grid": "A0:B0",
+   "note": "LeakTrace wordmark beside a small peacock-feather monogram icon"
+  },
+  {
+   "id": "breadcrumb",
+   "kind": "text",
+   "grid": "C0:D0",
+   "note": "breadcrumb Investigate / LT-7F3A"
+  },
+  {
+   "id": "search",
+   "kind": "control",
+   "grid": "G0:I0",
+   "note": "search field: Search cases, centres"
+  },
+  {
+   "id": "lang",
+   "kind": "control",
+   "grid": "J0:J0",
+   "note": "EN | hindi language toggle and user avatar icon"
+  },
+  {
+   "id": "nav-ops",
+   "kind": "control",
+   "grid": "A1:B3",
+   "note": "Operations label and nav items Prepare paper, Investigate (selected row with saffron bar), Cases"
+  },
+  {
+   "id": "nav-gov",
+   "kind": "control",
+   "grid": "A3:B4",
+   "note": "Governance label and nav items Key custody, Audit log"
+  },
+  {
+   "id": "nav-foot",
+   "kind": "text",
+   "grid": "A9:B9",
+   "note": "LeakTrace v1.4.2 and For a fairer tomorrow"
+  },
+  {
+   "id": "title",
+   "kind": "text",
+   "note": "page title Investigation \u00c2\u00b7 LT-7F3A",
+   "box": {
+    "x": 0.18,
+    "y": 0.092,
+    "w": 0.21,
+    "h": 0.05
+   }
+  },
+  {
+   "id": "chips",
+   "kind": "control",
+   "grid": "E1:F1",
+   "note": "chips 200 centres and English"
+  },
+  {
+   "id": "notice",
+   "kind": "chrome",
+   "grid": "G1:J1",
+   "note": "coral bordered notice: Investigative lead, not proof. Identifies a printed copy, not a person."
+  },
+  {
+   "id": "kpi-verdict",
+   "kind": "chrome",
+   "grid": "C1:D2",
+   "note": "saffron to coral gradient verdict tile with dark check icon: Fingerprint found, Statistically significant match"
+  },
+  {
+   "id": "kpi-source",
+   "kind": "text",
+   "grid": "E1:F2",
+   "note": "tile Most probable source C0012"
+  },
+  {
+   "id": "kpi-p",
+   "kind": "text",
+   "grid": "G1:H2",
+   "note": "tile p-value 2 x 10^-17"
+  },
+  {
+   "id": "kpi-z",
+   "kind": "text",
+   "grid": "I1:J2",
+   "note": "tile z \u00c2\u00b7 margin 9.0 \u00c2\u00b7 8.6 sigma in lilac"
+  },
+  {
+   "id": "evidence-title",
+   "kind": "text",
+   "note": "panel heading Evidence",
+   "box": {
+    "x": 0.19,
+    "y": 0.305,
+    "w": 0.065,
+    "h": 0.035
+   }
+  },
+  {
+   "id": "evidence-photo",
+   "kind": "chrome",
+   "grid": "C3:F6",
+   "note": "runtime image slot: the decoder API returns the overlay of the investigator uploaded photo; shown with object-fit cover and rounded corners",
+   "codeDrawn": true
+  },
+  {
+   "id": "evidence-caption",
+   "kind": "text",
+   "note": "caption 77/77 shifted words agree \u00c2\u00b7 302 gaps \u00c2\u00b7 28 lines",
+   "box": {
+    "x": 0.19,
+    "y": 0.663,
+    "w": 0.25,
+    "h": 0.03
+   }
+  },
+  {
+   "id": "dist-title",
+   "kind": "text",
+   "grid": "G3:H3",
+   "note": "panel heading Score distribution"
+  },
+  {
+   "id": "dist-sub",
+   "kind": "text",
+   "grid": "I3:J3",
+   "note": "4000 wrong keys"
+  },
+  {
+   "id": "dist-chart",
+   "kind": "chrome",
+   "codeDrawn": true,
+   "grid": "G3:J6",
+   "note": "histogram chart drawn from data at runtime: lilac bins, coral dashed threshold z = 4.4, emerald to saffron bar labelled C0012, axes"
+  },
+  {
+   "id": "table-title",
+   "kind": "text",
+   "note": "panel heading Ranked centres",
+   "box": {
+    "x": 0.19,
+    "y": 0.735,
+    "w": 0.1,
+    "h": 0.035
+   }
+  },
+  {
+   "id": "table-sub",
+   "kind": "text",
+   "grid": "I7:J7",
+   "note": "Showing top 5 of 200 centres"
+  },
+  {
+   "id": "table",
+   "kind": "chrome",
+   "grid": "C8:J9",
+   "note": "ranked centres table: header row, five rows with teal to emerald score bars, p-values, status pills Significant and Below threshold"
+  }
+ ]
+}
