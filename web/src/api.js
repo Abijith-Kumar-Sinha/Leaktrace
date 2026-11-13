@@ -1,4 +1,4 @@
-// Backend base URL: empty in dev (Vite proxies /api); the GitHub Pages build sets VITE_API_BASE to the Hugging Face Space.
+// Backend base URL: empty in dev (Vite proxies /api); the GitHub Pages build sets VITE_API_BASE to the Render service.
 export const API = (import.meta.env.VITE_API_BASE || '').replace(/\/$/, '')
 
 export async function api(path, opts) {

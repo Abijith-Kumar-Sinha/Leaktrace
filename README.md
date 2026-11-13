@@ -11,8 +11,8 @@ SDG 4 (Quality Education). English and Hindi (Devanagari). Mock papers only (`da
 
 ## Live demo
 - **Web app:** https://abijith-kumar-sinha.github.io/Leaktrace/ (add `?lang=hi` after the route for the Hindi UI, e.g. `#/investigate?lang=hi`).
-- **Decoder API:** a Hugging Face Docker Space built from `deploy/hf-space/`. The Space clones this repo, so it only needs the
-  `Dockerfile` and `README.md` from that folder. The free Space sleeps when idle, so the first request after a pause can take up to a minute.
+- **Decoder API:** a free Render web service built from the root `Dockerfile` (Blueprint: `render.yaml`). It redeploys on every push
+  to `main`. The free service sleeps after 15 idle minutes, so the first request after a pause can take about a minute.
 - **Try it:** Prepare paper → download the sample paper and the 200-centre list from the links on that page → enter a key of
   12 or more characters → download the ZIP → print or screenshot one centre's PDF → photograph it → Investigate.
 - The GitHub Pages build reads the API URL from the repository variable `LEAKTRACE_API`.
